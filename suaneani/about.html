@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Our Story - Sua Ne Ani</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandYellow: '#FDB813',
+            brandOrange: '#F58220',
+            brandGreen: '#397B21',
+            brandLightGreen: '#A5D6A7',
+            brandBg: '#FFFDF5',
+          },
+          fontFamily: {
+            brand: ['Fredoka', 'sans-serif'],
+            body: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FFFDF5;
+      font-family: 'Outfit', sans-serif;
+    }
+    .font-brand { font-family: 'Fredoka', sans-serif; }
+    .blob-img {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      overflow: hidden;
+    }
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: repeating-linear-gradient(to right, #FDB813 0, #FDB813 5px, transparent 5px, transparent 10px);
+      z-index: 0;
+    }
+    .value-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    /* Active nav link styling */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="text-slate-800">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: HeroSection -->
+<section class="py-16 md:py-24 bg-brandBg overflow-hidden relative" data-purpose="hero-section">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-brandOrange font-bold tracking-widest text-sm uppercase">ABOUT US</span>
+      <h1 class="text-6xl md:text-7xl font-brand font-bold mt-4 leading-tight">
+        Our <span class="text-brandYellow">Story.</span>
+      </h1>
+      <p class="text-xl md:text-2xl font-bold text-brandGreen mt-6 leading-snug">
+        From the evolution of vision<br/>to the future of education.
+      </p>
+      <div class="mt-8 space-y-4 text-slate-600 text-lg leading-relaxed max-w-lg">
+        <p>Sua Ne Ani is a play on the words LEARNING and VISION/Eye from a Ghanaian dialect.</p>
+        <!-- REPLACED TEXT with new 541 million years paragraph -->
+        <p>541 million years ago, the sudden evolution of VISION ended a planetary biological bottleneck, triggering the Cambrian explosion of diverse, interconnected life. Today, Ghana's education system is in a bottleneck because our rich resources in the country and the world are operating in blind spots. SuaNeAni is the system's connective 'eye'.</p>
+      </div>
+      <button class="mt-10 bg-brandYellow hover:bg-brandOrange text-white font-bold py-3 px-8 rounded-full flex items-center gap-3 transition-all group shadow-lg">
+        <a href="get-involved.html">Join Our Mission</a>
+        <svg class="h-5 w-5 group-hover:translate-x-1 transition" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="relative flex justify-center">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <!-- Top left – keep as is (good) -->
+          <img alt="Impact image 1" class="blob-img w-full h-48 object-cover border-4 border-white shadow-xl" src="images/image12.jpg"/>
+          <!-- Lower left – change to African woman and kids (placeholder) -->
+          <img alt="African woman and children" class="blob-img w-full h-64 object-cover border-4 border-white shadow-xl" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=400&fit=crop"/>
+        </div>
+        <div class="space-y-4 pt-12">
+          <!-- Upper right – 1 African presenting, 2 African sitting and one European (placeholder) -->
+          <img alt="Diverse group in meeting" class="blob-img w-full h-64 object-cover border-4 border-white shadow-xl" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop"/>
+          <!-- Lower right – keep as is (good) -->
+          <img alt="Impact image 4" class="blob-img w-full h-48 object-cover border-4 border-white shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaHi395Kxyc4p7GXKMSXZM_eqD2F9mTv-MaS8U7zN6YCpFhIG0mrBZQDaS-exxamV2TZMENytHNU7pdUG9iQNrNvsZiMzDjiajD9AcjoR7UGXf2vBmTKIZ2FhQ9Ubbt_JJcOjC4hZlPdRHwaCbugawgSOtOp4wcilT--1usiHsLUrZq55FQz3F3r3L9rvF5MK_9VefU13uSOeo2ttwWUMpqQHUqbWKPgEyIPbeKERHpPbl5Ls1jflY02pdUnbCchGr52dH-gdyjR1b"/>
+        </div>
+        <!-- Removed the central mascot logo as per instruction -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: HeroSection -->
+
+<!-- BEGIN: TimelineSection (moved from Home) -->
+<section class="py-20 bg-white" data-purpose="evolution-timeline">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <span class="text-brandOrange font-bold tracking-widest text-sm uppercase">OUR JOURNEY</span>
+    <h2 class="text-4xl font-brand font-bold mt-4">A Journey of Over <span class="text-brandGreen">541 Million</span> Years</h2>
+    <!-- Timeline Flex -->
+    <div class="mt-16 flex flex-wrap lg:flex-nowrap justify-between gap-8 relative">
+      <div class="hidden lg:block absolute top-12 left-10 right-10 h-0.5 border-t-2 border-dashed border-brandYellow z-0"></div>
+      <!-- Milestone 1 -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbhSi8Mgd_5fTzF35hqxS07Dmbs_VwCtVCYaZ2pxbhT1R1Hbxr94uoKIkXZ9KRVokUYLRsFit_tjyVIJt_9bTO4KYdjQtpZF-jgt4ghJn9hB6OeIkEb7IPb31R_ZL-gfNPv9HJf3VjXndOJrbq8lHpY1Ro-5XRoaM0zHrfMZC00Xi4_zsSD9Ceti_MHWUyApgM6wiTALNLfv7vHu1BKGnYW5An-xlxFxXshz-uI-m56I4f3XYvFksh-c9zIeRW6KAKJfVME1wBwX99"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">13.7 Billion</p>
+          <p class="text-brandOrange font-medium">years ago</p>
+          <p class="mt-2 text-sm text-slate-500">Beginning of<br/>the Universe</p>
+        </div>
+      </div>
+      <!-- Milestone 2 -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASVvgbiPQ6g2YiYAp88X23w9p9rp3XUffTXsswZOpg4U8YQ4kctES49xdL5NQtnNd_aq91SuAPhXPMkw4JLi7DJkk1sdYPOXNj24g7AcmQnmyZSuAsSwm-qoklfN1WfstNqZUVg2MSRzB9Y23oNRfDAmaW-r5j-TRR-vIQwqHAQcztRSbg7qroLPw9ndNuPrMSGlLcbLI4OXXc-XD2VxxaZBCtFjNitPdQxIclRA_sOYoIdNtQhSgAIcq3WnK0nTuyRyHshFL_HLY-"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">4.5 Billion</p>
+          <p class="text-brandOrange font-medium">years ago</p>
+          <p class="mt-2 text-sm text-slate-500">Formation<br/>of Earth</p>
+        </div>
+      </div>
+      <!-- Milestone 3 -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPwjkPMWaiKk_JBGDCk1obHzxwa-P14Qt-FwV6F9LxI-0NxeT105WmhDyg_D943orSXLX_TNauTWy3yW-H9GVy6NslO-OjIQYoQCp9AfSKFUoJ6_nwKyfhOUUH1EJL0tJJywei2GyMSwQj-TUI8fG7gcIb7T-Vmba8KoCdMcvgZ_EX6orgEgTci0gfvv4IByUTmSBvdwVLYrEpQioSrYM2wTgskoPtCZSAmFPIc_5MPp72DKwMeNF1P4IBhc6D5nG5hOL7uKPLvRT"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">3.5 Billion</p>
+          <p class="text-brandOrange font-medium">years ago</p>
+          <p class="mt-2 text-sm text-slate-500">Early life-forms<br/>developed</p>
+        </div>
+      </div>
+      <!-- Milestone 4 -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIv8-QrgrBFAjYuyI2z0k-A9g-YcLWdI4Vui4GD0NZSF9OfI-ug8y5KFp2SohOMiDErAXR44XC9N1Ud5peg7Zxt4NzvQj_VBS5jaWcVzEM68iZi4KutcJBqWBSWs-WMIY7syfa-2mOwWcuUGCNn8cnGJuquY10mIhL91OVjylB6tMUGIl9_-AD1IY_8T8zPKnZXkXrbTKG6n55Mn3ixUhOT4j2AX3IBDQxzMxNDnUTPFWrwaxA0pJnvaju2OfAOzOrtW7jCTSVPKn4"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">1 Billion</p>
+          <p class="text-brandOrange font-medium">years ago</p>
+          <p class="mt-2 text-sm text-slate-500">First multi-cellular<br/>life appeared</p>
+        </div>
+      </div>
+      <!-- Milestone 5 -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Wpvvb-w4-LC6LISC21ZTBbqi_JoNSQX8PBena1Q7hlEA1yS0hkrCkbxBBxjQggoP8qyqKis-_mr91LmXLRT49xmN4QyfLXmKIMQeGS9FFPM8gQKdyTGlbJ_amWV-xmr77Xj2_fRtDFLbpTku4zyH35JJEYC8U3clzA_6ZB0i6fJf39yZecpR7Fj3Xl4WxwDZvxmDvcDaEr4muQPZfdgP-4-5HuvQktM5xKYjej2DbzwLJWfJvm3jPUIs5gAFUZQO7EFsEoSVSoZt"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">600 Million</p>
+          <p class="text-brandOrange font-medium">years ago</p>
+          <p class="mt-2 text-sm text-slate-500">Large complex<br/>organisms</p>
+        </div>
+      </div>
+      <!-- Milestone 6 Highlight -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-orange-50 border-4 border-brandYellow shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKrpYBpcV-tFar6MzSJ2nbJqbxvJDQi9BIEOOKNVK1KTjy7-93O82f4sqYk4k0xyt0PrXWlHjj9SOMyzcXQ9SWtQNZA8ItT8BAN5mTd_oTp28G9vs-L2Ysk9LwDIh7eoaVqStAhclpKggwfQvobZgcBTmbWQKWLceuEGOXqZIQ7_CwSwdmAaApcyZPlBXJPE1_XHwy4ODR32kF8DD3i2zoY_zV0ag7zGnZE1D2zduNXSvJf8UhIeCaT35axmbczl6hOBLZTplfWkx_"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">541 Million</p>
+          <p class="text-brandOrange font-medium">years ago</p>
+          <p class="mt-2 text-sm font-bold text-brandGreen uppercase">VISION DEVELOPED</p>
+        </div>
+      </div>
+      <!-- Milestone 7 -->
+      <div class="relative z-10 w-full md:w-1/4 lg:w-auto flex flex-col items-center group">
+        <div class="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-lg overflow-hidden mb-6 group-hover:scale-110 transition">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANncS1TSfUfsx4XPkCSJJK2GC-poszZEfLuC_caziXmPPitv_tgGStaCa4R1lA0MSIMvPXRbw49o6XwykJM-XqXeIcRlYz947UyodWtxwXVPB-VAd7qzuGHbLjFOVVrerOgMHGW9Ob--Qva12kiis0vjgt3R5WAyqUZAcEfUwXivQEL4dyoBSXHvJYNK1Gr7PpGYUNJ5VACh8UEMEeHr2UOUrmra2kEXNnY3wNondS6qOLWHKG4bJ42IYA0wNvbagN73CzhMMQ3Ua4"/>
+        </div>
+        <div class="text-center">
+          <p class="font-bold text-lg">Today</p>
+          <p class="mt-4 text-sm text-slate-500 max-w-[150px]">We continue to learn, interact and shape our future</p>
+        </div>
+      </div>
+    </div>
+    <!-- REPLACED text: changed "education can transform humanity" to "education will transform humanity" -->
+    <p class="mt-20 text-brandGreen font-bold text-xl md:text-2xl italic">
+      "Just as vision transformed life, education will transform humanity."
+    </p>
+  </div>
+</section>
+<!-- END: TimelineSection -->
+
+<!-- ============================================================ -->
+<!-- OUR PURPOSE SECTION - HIDDEN as per request -->
+<!-- ============================================================ -->
+
+<!-- BEGIN: New Section - OUR PASSION with Mission -->
+<section class="py-20 bg-brandBg" data-purpose="our-passion">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-brandOrange font-bold tracking-widest text-sm uppercase">OUR PASSION</span>
+      <h2 class="text-4xl font-brand font-bold mt-4">Our <span class="text-brandGreen">Mission</span></h2>
+    </div>
+    <div class="bg-white rounded-3xl p-10 md:p-16 shadow-sm border border-slate-100 max-w-4xl mx-auto">
+      <p class="text-slate-700 leading-relaxed text-lg md:text-xl">
+        SuaNeAni is dedicated to unifying Ghana's educational landscape by serving as the connective ecosystem layer that integrates fragmented educational resources into a seamless, accessible learning infrastructure. We partner with global development and commercial institutions to deploy our enabling framework—combining internet gateways, computer hardware, foundational physical and digital infrastructure, and curated digital learning journeys. We provide enhanced, future-oriented training to empower educators to help every learner with real-world implementation and holistic well-being support - eliminating geographic and socio-economic boundaries and scaling modern, culturally grounded competency for everyone from childhood through adulthood.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- END: Our Passion Section -->
+
+<!-- ============================================================ -->
+<!-- OUR TEAM SECTION - HIDDEN as per request -->
+<!-- ============================================================ -->
+
+<!-- BEGIN: PartnersSection (updated with new logos) -->
+<section class="py-16 bg-white border-y border-slate-100" data-purpose="partners-carousel">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <span class="text-brandGreen font-bold tracking-widest text-sm uppercase">OUR PARTNERS</span>
+      <h2 class="text-3xl font-brand font-bold mt-2">Together for a <span class="text-brandGreen">Better Future</span></h2>
+    </div>
+    <div class="flex items-center gap-8 overflow-hidden py-4 px-4 bg-slate-50/50 rounded-2xl">
+      <button class="bg-brandGreen text-white p-2 rounded-full shadow-md hover:bg-brandOrange transition">
+        <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="flex flex-1 justify-between items-center gap-8 px-4 flex-wrap">
+        <!-- Updated with new partner logos/names (placeholder images) -->
+        <div class="flex flex-col items-center">
+          <img alt="Adwinsa" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/adwinsa.png"/>
+          <span class="text-xs text-slate-500 mt-1">Adwinsa</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img alt="PentecostPress Limited" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/pentecost.png"/>
+          <span class="text-xs text-slate-500 mt-1">PentecostPress</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img alt="Pentos" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/pentsos.png"/>
+          <span class="text-xs text-slate-500 mt-1">Pentos</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img alt="Thirdwell" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/thirdwell.png"/>
+          <span class="text-xs text-slate-500 mt-1">Thirdwell</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img alt="IBC" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="https://via.placeholder.com/100x40?text=IBC"/>
+          <span class="text-xs text-slate-500 mt-1">IBC</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img alt="ORECA" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/oreca.png"/>
+          <span class="text-xs text-slate-500 mt-1">ORECA</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img alt="North Legon school complex" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="https://via.placeholder.com/100x40?text=North+Legon"/>
+          <span class="text-xs text-slate-500 mt-1">North Legon</span>
+        </div>
+      </div>
+      <button class="bg-brandGreen text-white p-2 rounded-full shadow-md hover:bg-brandOrange transition">
+        <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- END: PartnersSection -->
+
+<!-- BEGIN: CTASection (unchanged) -->
+<section class="py-12" data-purpose="cta-banner">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-gradient-to-r from-brandYellow to-brandOrange rounded-[40px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden group">
+      <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-white/20 rounded-full blur-2xl group-hover:scale-110 transition duration-700"></div>
+      <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+        <div class="bg-white p-4 rounded-3xl shadow-lg border-2 border-brandYellow">
+          <img alt="Mascot" class="w-16 h-16" src="images/bee.png"/>
+        </div>
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl md:text-4xl font-brand font-bold text-slate-800">Be Part of the Movement</h2>
+          <p class="text-slate-700 font-medium mt-2">Together, we can open minds, inspire hearts<br/>and shape a peaceful, sustainable future.</p>
+        </div>
+      </div>
+      <button class="mt-8 md:mt-0 bg-slate-900 text-white font-bold py-4 px-10 rounded-full hover:bg-slate-800 transition shadow-lg flex items-center gap-4 group">
+        <a href="get-involved.html">Get Involved Today</a>
+        <svg class="h-5 w-5 group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+      <div class="hidden lg:block absolute right-12 top-10 opacity-20 rotate-12">
+        <img alt="Bee Icon" src="images/bee.png"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: CTASection -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  function loadComponents() {
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load header');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header-component').innerHTML = data;
+        console.log('Header loaded');
+        setTimeout(() => {
+          if (typeof setActiveTab === 'function') setActiveTab();
+        }, 200);
+      })
+      .catch(error => console.error('Error loading header:', error));
+
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load footer');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-component').innerHTML = data;
+        console.log('Footer loaded');
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  }
+
+  // Mobile menu fallback
+  function setupMobileMenuFallback() {
+    document.addEventListener('click', function(e) {
+      const openBtn = e.target.closest('#menu-open');
+      if (openBtn) {
+        e.preventDefault();
+        const overlay = document.getElementById('mobile-overlay');
+        const panel = document.getElementById('mobile-panel');
+        if (overlay) overlay.classList.add('open');
+        if (panel) panel.classList.add('open');
+        if (document.body) document.body.classList.add('no-scroll');
+        return;
+      }
+      const closeBtn = e.target.closest('#close-mobile');
+      if (closeBtn) {
+        e.preventDefault();
+        const overlay = document.getElementById('mobile-overlay');
+        const panel = document.getElementById('mobile-panel');
+        if (overlay) overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+        return;
+      }
+      const overlay = e.target.closest('#mobile-overlay');
+      if (overlay) {
+        const panel = document.getElementById('mobile-panel');
+        if (overlay.classList.contains('open')) {
+          overlay.classList.remove('open');
+          if (panel) panel.classList.remove('open');
+          if (document.body) document.body.classList.remove('no-scroll');
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+  } else {
+    setupMobileMenuFallback();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  setTimeout(setActiveTab, 1000);
+  setTimeout(setActiveTab, 2000);
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>

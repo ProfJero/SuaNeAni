@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get Involved - Sua Ne Ani</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              yellow: '#f5a623',
+              dark: '#1a3a1d',
+              green: '#2d5a27',
+              surface: '#fff8f6',
+              'surface-low': '#fff1eb',
+            }
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .hero-title { line-height: 1.1; }
+
+    /* Active nav link styling - matches header */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="bg-brand-surface text-gray-800">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: HeroSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<span class="text-brand-green font-bold tracking-widest text-xs uppercase">GET INVOLVED</span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-brand-dark hero-title">
+          Many Ways to <br/>
+<span class="text-brand-green">Make a Difference</span>
+</h1>
+<p class="text-lg text-gray-600 max-w-lg">
+          Be part of a movement that is shaping brighter futures and stronger communities.
+        </p>
+<div class="flex items-start gap-3 pt-4">
+<span class="text-brand-yellow text-2xl">🧡</span>
+<p class="text-brand-dark font-semibold">
+            Your time. Your skills. Your support.<br/>
+            <span class="text-brand-green">Our tomorrow.</span>
+          </p>
+</div>
+</div>
+<div class="flex-1 relative">
+<!-- Main students planting image -->
+<div class="rounded-[40px] overflow-hidden shadow-2xl">
+<img alt="Students planting" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuActC-Uqp3h3Nc72QDfCKfHLp0kHrGX9kFayZUMx3E6xV3kUgILy6LIwVBDcf5GBdHWNIiTUZxGOCedURil-TpcNYUmgS7niHwve13zdxRe-k2JJyK8_HfiQAdRG7fV_CC4HA0Q8jI-It_XlN2-H3Ccjn1fY0ejOEYwkVlf6tnX8y_NuPpQoUkXagbuO3PZ0ZmMSmWi9o5PHPmJ88lr16w_OSDlFzLNAsPrcbBm4DmmzjKIwKIVxbfF"/>
+</div>
+<!-- Decorative Circle Info -->
+<div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-full shadow-lg border border-gray-100 flex flex-col items-center justify-center text-center w-48 h-48">
+<img alt="Bee Icon" class="mb-2" src="images/bee.png"/>
+<p class="text-xs font-bold text-brand-dark leading-tight">Small actions.<br/>Great hearts.<br/>Big impact.</p>
+<div class="mt-2 text-brand-green">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+
+<!-- BEGIN: GridInvolvement -->
+<section class="bg-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-extrabold text-center text-brand-dark mb-12">
+          Choose How You Want to <span class="text-brand-green">Get Involved</span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Volunteer Card -->
+<div class="border border-brand-surface-low rounded-2xl p-6 text-center hover:shadow-lg transition-shadow bg-white flex flex-col items-center">
+<div class="bg-brand-surface-low p-4 rounded-full mb-4">
+<svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+</div>
+<h3 class="font-bold text-brand-dark mb-2">Volunteer</h3>
+<p class="text-xs text-gray-500 mb-4">Give your time and talents to empower young minds.</p>
+<a class="text-brand-green font-bold text-xs flex items-center gap-1 mt-auto" href="#">Learn More <span class="text-base">→</span></a>
+</div>
+<!-- Donate Card -->
+<div class="border border-brand-surface-low rounded-2xl p-6 text-center hover:shadow-lg transition-shadow bg-white flex flex-col items-center">
+<div class="bg-brand-surface-low p-4 rounded-full mb-4">
+<svg class="w-8 h-8 text-brand-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+</div>
+<h3 class="font-bold text-brand-dark mb-2">Donate</h3>
+<p class="text-xs text-gray-500 mb-4">Your contributions help us provide quality education and resources.</p>
+<a class="text-brand-yellow font-bold text-xs flex items-center gap-1 mt-auto" href="#">Give Now <span class="text-base">→</span></a>
+</div>
+<!-- Partner Card -->
+<div class="border border-brand-surface-low rounded-2xl p-6 text-center hover:shadow-lg transition-shadow bg-white flex flex-col items-center">
+<div class="bg-brand-surface-low p-4 rounded-full mb-4">
+<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+</div>
+<h3 class="font-bold text-brand-dark mb-2">Partner</h3>
+<p class="text-xs text-gray-500 mb-4">Collaborate with us to create lasting impact in communities.</p>
+<a class="text-blue-600 font-bold text-xs flex items-center gap-1 mt-auto" href="#">Partner With Us <span class="text-base">→</span></a>
+</div>
+<!-- Advocate Card -->
+<div class="border border-brand-surface-low rounded-2xl p-6 text-center hover:shadow-lg transition-shadow bg-white flex flex-col items-center">
+<div class="bg-brand-surface-low p-4 rounded-full mb-4">
+<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+</div>
+<h3 class="font-bold text-brand-dark mb-2">Advocate</h3>
+<p class="text-xs text-gray-500 mb-4">Spread the word and help us reach more communities.</p>
+<a class="text-purple-600 font-bold text-xs flex items-center gap-1 mt-auto" href="#">Take Action <span class="text-base">→</span></a>
+</div>
+<!-- Mentor Card -->
+<div class="border border-brand-surface-low rounded-2xl p-6 text-center hover:shadow-lg transition-shadow bg-white flex flex-col items-center">
+<div class="bg-brand-surface-low p-4 rounded-full mb-4">
+<svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+</div>
+<h3 class="font-bold text-brand-dark mb-2">Mentor a Child</h3>
+<p class="text-xs text-gray-500 mb-4">Inspire, guide and support a child on their learning journey.</p>
+<a class="text-brand-green font-bold text-xs flex items-center gap-1 mt-auto" href="#">Become a Mentor <span class="text-base">→</span></a>
+</div>
+<!-- In-Kind Support Card -->
+<div class="border border-brand-surface-low rounded-2xl p-6 text-center hover:shadow-lg transition-shadow bg-white flex flex-col items-center">
+<div class="bg-brand-surface-low p-4 rounded-full mb-4">
+<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+</div>
+<h3 class="font-bold text-brand-dark mb-2">In-Kind Support</h3>
+<p class="text-xs text-gray-500 mb-4">Donate materials, books or services that we need.</p>
+<a class="text-orange-600 font-bold text-xs flex items-center gap-1 mt-auto" href="#">See Our Needs <span class="text-base">→</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: GridInvolvement -->
+
+<!-- BEGIN: VolunteerSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-16 items-start">
+<div class="w-full lg:w-1/3">
+<h2 class="text-3xl font-extrabold text-brand-dark mb-4">Volunteer With Us</h2>
+<p class="text-gray-600 mb-8">Your skills can change lives. Join our team of passionate people creating impact every day.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="bg-brand-green text-white rounded-full p-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></span>
+<span class="text-sm font-semibold text-gray-700">Work with children and youth</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="bg-brand-green text-white rounded-full p-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></span>
+<span class="text-sm font-semibold text-gray-700">Support learning and activities</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="bg-brand-green text-white rounded-full p-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></span>
+<span class="text-sm font-semibold text-gray-700">Help in community projects</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="bg-brand-green text-white rounded-full p-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></span>
+<span class="text-sm font-semibold text-gray-700">Events and outreach support</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="bg-brand-green text-white rounded-full p-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></span>
+<span class="text-sm font-semibold text-gray-700">Remote opportunities available</span>
+</li>
+</ul>
+<button class="bg-brand-dark text-white px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-black transition-colors">
+          Join as a Volunteer
+          <span class="text-xl">→</span>
+</button>
+</div>
+<div class="w-full lg:w-2/3">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-extrabold text-brand-dark">Opportunities to Serve</h3>
+<button class="text-brand-green border border-brand-green rounded-full px-4 py-2 text-xs font-bold flex items-center gap-2">
+            View All Opportunities <span>→</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Opp 1 -->
+<div class="bg-white rounded-2xl shadow-sm border border-gray-50 overflow-hidden group">
+<img alt="Tutoring" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdcVBJPuSbEIXutxmxfi7ouDyoRSz8mgohxiM5cSSF48XsS2beDD3IE616leXhr4HlP95ubDHKO6SPT5ot9RJo80nnOVViTUVUq_wWTG17AH-MzVo9JS_-aQPYc5yfBlg5k0ug4rZBGcPmmQL5ZO6JsscMYO4M-PhON5tS1NPTIb6pvu7U3CQh649n_V0pCsXZ96EOl88LMk3HCRlbGx4ntAIZYkupKL7ptz_9xiJ8DgwySc787QS7"/>
+<div class="p-4">
+<div class="bg-brand-surface-low w-8 h-8 rounded p-1.5 mb-2 -mt-8 relative z-10 border border-white">
+<svg class="text-brand-green" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark mb-1">Tutoring &amp; Teaching</h4>
+<p class="text-[10px] text-gray-500">Help learners improve in academic subjects and digital skills.</p>
+</div>
+</div>
+<!-- Opp 2 -->
+<div class="bg-white rounded-2xl shadow-sm border border-gray-50 overflow-hidden group">
+<img alt="Community Outreach" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe25eXE5CwkjjjsEETIifA7mCwW4fy6pUweBK3OFZihy84AXMBbgx8wTzOwaA0TGBDRR788ZPjzwsRHazhmz6WnHa_jgdjQXlsC6tOjojLGwh7BRFnUq1RY33pKKpt3F3xQP1S2dx6OhBxHoxH4iNbamNCt-g4k68cMzVRKoQ-5C1-YnrMHawoYDXELJYi_VErM9H16rEKdYZKsz-8qzt60NXJolvdeOaVdijP-Vasi4H82W0KJNjf"/>
+<div class="p-4">
+<div class="bg-brand-surface-low w-8 h-8 rounded p-1.5 mb-2 -mt-8 relative z-10 border border-white">
+<svg class="text-brand-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark mb-1">Community Outreach</h4>
+<p class="text-[10px] text-gray-500">Support outreach programs and community engagement activities.</p>
+</div>
+</div>
+<!-- Opp 3 -->
+<div class="bg-white rounded-2xl shadow-sm border border-gray-50 overflow-hidden group">
+<img alt="Media" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA69JSThboWTOGf4LjhMYmF-MFU-Az9nt9yjJr5drZm3FKucyMwF-q5odcVSl-zT-m3gzJOWdWVc6jtVn6xoetHCUJD6dkgiQAFF6n_6lW-zJPEHDb-wxrzRPIGzZMBhHM0BBvuQ0pTN4iyOkkRg5_nqBRaNXf2ICBmL604juAjPL_Xe0qmwKBYm6684hW66TLWnQFXu4ZKqwQdh_DMz2xJ-yZrfyqgOs3XyGCjy_xl9B7l4YhxW0iX"/>
+<div class="p-4">
+<div class="bg-brand-surface-low w-8 h-8 rounded p-1.5 mb-2 -mt-8 relative z-10 border border-white">
+<svg class="text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark mb-1">Media &amp; Creative</h4>
+<p class="text-[10px] text-gray-500">Use your creative skills in design, photography, videography and more.</p>
+</div>
+</div>
+<!-- Opp 4 -->
+<div class="bg-white rounded-2xl shadow-sm border border-gray-50 overflow-hidden group">
+<img alt="Logistics" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2GLEIXVeI1krZ5AnqyDpr0obxC6pv7NveIeEJkwXOQJuRauONtkwf0t6xIM99wexT1GfinRcN96R9tJlVA0CPIbF7K6wFahtNNaQrKueE_J-1I67kyCYPrrhvNE-vJlYtsTSx8PVtjc7xOKnuRToLNo2QovrHBa4k6LsmqAikScdxGfr13gYzBxFn-kk-2pUajpjZ3gxZF4fv1lcCDddSX-V9NyDxlTbDvgn24u5EvqIxEZu7erIL"/>
+<div class="p-4">
+<div class="bg-brand-surface-low w-8 h-8 rounded p-1.5 mb-2 -mt-8 relative z-10 border border-white">
+<svg class="text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark mb-1">Events &amp; Logistics</h4>
+<p class="text-[10px] text-gray-500">Help plan and organize events, workshops and program activities.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: VolunteerSection -->
+
+<!-- BEGIN: PartnerSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1">
+<h2 class="text-3xl font-extrabold text-brand-dark mb-4">Partner With Sua Ne Ani</h2>
+<p class="text-gray-600 mb-8">We collaborate with organizations, businesses and institutions to drive sustainable change.</p>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<div class="bg-green-50 w-10 h-10 flex items-center justify-center rounded">
+<svg class="text-brand-green w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark">Corporate Partnerships</h4>
+<p class="text-[10px] text-gray-500">Sponsor programs and support our initiatives.</p>
+</div>
+<div class="space-y-2">
+<div class="bg-yellow-50 w-10 h-10 flex items-center justify-center rounded">
+<svg class="text-brand-yellow w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark">School &amp; University Partnerships</h4>
+<p class="text-[10px] text-gray-500">Work with us on educational projects.</p>
+</div>
+<div class="space-y-2">
+<div class="bg-blue-50 w-10 h-10 flex items-center justify-center rounded">
+<svg class="text-blue-500 w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark">NGO Collaborations</h4>
+<p class="text-[10px] text-gray-500">Join forces to reach more communities and create impact.</p>
+</div>
+<div class="space-y-2">
+<div class="bg-purple-50 w-10 h-10 flex items-center justify-center rounded">
+<svg class="text-purple-500 w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+</div>
+<h4 class="font-bold text-sm text-brand-dark">Resource &amp; Expertise</h4>
+<p class="text-[10px] text-gray-500">Share your skills, knowledge and resources with us.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-brand-green rounded-3xl p-8 text-white flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+<div class="relative z-10 space-y-6">
+<h3 class="text-3xl font-extrabold">Together, We Go Further</h3>
+<p class="text-sm opacity-90 leading-relaxed">Partnership is more than support—it's a shared vision for a better future.</p>
+<button class="bg-brand-yellow text-brand-dark px-6 py-3 rounded-full font-bold flex items-center gap-2 text-sm hover:bg-yellow-400 transition-colors">
+              Become a Partner <span>→</span>
+</button>
+</div>
+<div class="relative w-full md:w-1/2 aspect-square rounded-2xl overflow-hidden shadow-xl">
+<img alt="Students with laptop" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD609HHGVNCRs50uamtHCFhgWQuXFhWWWCWDoaDNJ3skrk_6l4IN818FuCYhgW_KPfMbrE4B_sFQqjZ80-2sBtDhEl-GPbuDB56uxCiZ51sPwd6bbaqomOWjPIkllqZAgP-hA9F5iloIGIrxWrsH2bz6nskCpYkVGP3hUJGBWaczwiJnGIKh86n7P7N8WKe8EH6cqjBftfC72EcHw0pAiTfRLYEunFKL5PuYY3Tbz2wichRmjzZww8R"/>
+</div>
+<!-- Decorative hands icon -->
+<div class="absolute bottom-4 right-4 opacity-10">
+<svg class="w-32 h-32" fill="white" viewbox="0 0 24 24"><path d="M11 11V3l4 4 4-4v8m-4 8l-4-4-4 4m4-4V11m-8 8H3m2 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PartnerSection -->
+
+<!-- BEGIN: EventsAndNews -->
+<section class="bg-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Upcoming Events 
+<div class="space-y-8">
+<div class="flex items-center gap-3">
+<div class="bg-brand-surface-low p-2 rounded">
+<svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+</div>
+<div>
+<h3 class="font-extrabold text-brand-dark">Upcoming Events</h3>
+<p class="text-[10px] text-gray-500">Join our events and be part of the change.</p>
+</div>
+</div>
+<div class="space-y-6">
+-->
+<!-- Event 1 
+<div class="flex items-center gap-4">
+<div class="text-center border-r pr-4 border-gray-100">
+<span class="block text-2xl font-extrabold text-brand-dark leading-none">15</span>
+<span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">JUN</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-brand-dark">Community Clean Up</h4>
+<p class="text-[10px] text-gray-400">Kintampo, Bono East Region | 8:00 AM - 12:00 PM</p>
+</div>
+</div>
+-->
+<!-- Event 2 
+<div class="flex items-center gap-4">
+<div class="text-center border-r pr-4 border-gray-100">
+<span class="block text-2xl font-extrabold text-brand-dark leading-none">28</span>
+<span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">JUN</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-brand-dark">STEM Workshop for Kids</h4>
+<p class="text-[10px] text-gray-400">Sua Ne Ani Learning Center | 9:00 AM - 1:00 PM</p>
+</div>
+</div>
+-->
+<!-- Event 3
+<div class="flex items-center gap-4">
+<div class="text-center border-r pr-4 border-gray-100">
+<span class="block text-2xl font-extrabold text-brand-dark leading-none">12</span>
+<span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">JUL</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-brand-dark">Back to School Drive</h4>
+<p class="text-[10px] text-gray-400">Kintampo, Bono East Region | 10:00 AM - 2:00 PM</p>
+</div>
+</div>
+</div>
+<a class="text-brand-green font-bold text-sm flex items-center gap-1" href="#">View All Events <span>→</span></a>
+</div>
+-->
+<!-- Spread the Word -->
+<div class="space-y-8 flex flex-col items-center lg:items-start">
+<div class="flex items-center gap-3">
+<div class="bg-brand-surface-low p-2 rounded">
+<svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+</div>
+<div>
+<h3 class="font-extrabold text-brand-dark">Spread the Word</h3>
+<p class="text-[10px] text-gray-500">Help us inspire more people to get involved. Share our mission with your network.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="bg-blue-600 text-white p-3 rounded-full hover:opacity-80" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+<a class="bg-black text-white p-3 rounded-full hover:opacity-80" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"></path></svg></a>
+<a class="bg-pink-600 text-white p-3 rounded-full hover:opacity-80" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+<a class="bg-blue-500 text-white p-3 rounded-full hover:opacity-80" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+<a class="bg-green-500 text-white p-3 rounded-full hover:opacity-80" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"></path></svg></a>
+</div>
+<div class="mt-4">
+<h4 class="font-serif italic text-2xl text-brand-green leading-tight">Every voice matters.<br/>Every action counts.</h4>
+<div class="mt-2 relative">
+<img alt="Bee flight path decoration" class="opacity-30" src="images/bees.png"/>
+</div>
+</div>
+</div>
+<!-- Stay Connected -->
+<div class="space-y-8">
+<div class="flex items-center gap-3">
+</div>
+<div class="relative pt-4">
+<!-- <img alt="Plant illustration decoration" class="absolute right-0 bottom-0 opacity-90" src="images/image12.jpg"/> -->
+</div>
+</div>
+</div>
+</section>
+<!-- END: EventsAndNews -->
+
+<!-- BEGIN: FinalCTA -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="bg-brand-yellow rounded-[40px] p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<!-- Background decoration -->
+<div class="absolute -bottom-8 -right-8 opacity-20">
+<svg class="w-64 h-64" fill="white" viewbox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99z"></path></svg>
+</div>
+<div class="flex items-center gap-6 z-10">
+<div class="bg-white p-4 rounded-full shadow-lg">
+<img alt="Sua Ne Ani Bee Character" class="w-16 h-16" src="images/bee.png"/>
+</div>
+<div>
+<h2 class="text-3xl font-extrabold text-brand-dark">Be the Change. Get Involved Today!</h2>
+<p class="text-brand-dark opacity-80 mt-2 font-medium">Together, we can create a world where every child learns, grows and thrives.</p>
+</div>
+</div>
+<button class="bg-brand-dark text-white px-10 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:bg-black transition-all shadow-xl z-10">
+          <a href="donate.html">I Want to Help <span>→</span></a>
+</button>
+</div>
+</section>
+<!-- END: FinalCTA -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          // Fallback: try to initialize from the header's script
+          console.log('Header script not loaded, trying to initialize manually');
+          const scriptTag = document.createElement('script');
+          // The header's script will run when the HTML is inserted
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>

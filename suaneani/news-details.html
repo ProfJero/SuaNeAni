@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inspiring the Next Generation of Innovators - Sua Ne Ani</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FDBA13',
+              darkYellow: '#E5A600',
+              green: '#1A4314',
+              lightGreen: '#F0F9EF',
+              dark: '#111827',
+              gray: '#6B7280'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #FFFFFF;
+    }
+    .honeycomb-pattern {
+      background-image: radial-gradient(#FDBA13 0.5px, transparent 0.5px);
+      background-size: 20px 20px;
+      opacity: 0.1;
+    }
+    .prose-custom h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #111827;
+    }
+    .prose-custom h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+    .prose-custom p {
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      color: #4B5563;
+    }
+    .prose-custom ul {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .prose-custom ul li {
+      list-style-type: disc;
+      margin-bottom: 0.5rem;
+      color: #4B5563;
+      line-height: 1.8;
+    }
+    .prose-custom blockquote {
+      border-left: 4px solid #FDBA13;
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #374151;
+    }
+    .prose-custom blockquote p {
+      margin-bottom: 0;
+    }
+
+    /* Active nav link styling - matches header */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-brand-dark">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: Article Header -->
+<section class="bg-lightGreen/30 py-12 lg:py-16">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+<a href="news.html" class="hover:text-brand-green transition-colors">News</a>
+<span class="text-gray-300">/</span>
+<span class="text-gray-400">Article</span>
+</nav>
+
+<!-- Category Badge -->
+<span class="inline-block bg-brand-yellow text-brand-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase mb-4">Featured Story</span>
+
+<!-- Title -->
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-brand-dark mb-4">
+  Inspiring the Next Generation of Innovators
+</h1>
+
+<!-- Meta Info -->
+<div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
+  <span class="flex items-center gap-2">
+    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+    May 15, 2025
+  </span>
+  <span class="flex items-center gap-2">
+    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+    By Sua Ne Ani Team
+  </span>
+  <span class="flex items-center gap-2">
+    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+    5 min read
+  </span>
+</div>
+
+<!-- Share Buttons -->
+<div class="flex items-center gap-3">
+  <span class="text-sm font-semibold text-gray-600">Share:</span>
+  <button class="w-8 h-8 rounded-full bg-[#3b5998] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </button>
+  <button class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg>
+  </button>
+  <button class="w-8 h-8 rounded-full bg-[#e4405f] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+  </button>
+  <button class="w-8 h-8 rounded-full bg-[#0077b5] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Article Header -->
+
+<!-- BEGIN: Article Content -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<div class="grid lg:grid-cols-12 gap-12">
+<!-- Main Content -->
+<div class="lg:col-span-8">
+<!-- Featured Image -->
+<div class="rounded-3xl overflow-hidden shadow-lg mb-10">
+<img alt="Featured Article Image" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU0Q_Plt7dwMw3DUH6VnKbUVbk3IGhf0xfrrg1UL0HXdVQfKaut3QzIskkGaMJ_Xpam4itYcpeWyJa17PEDUgnJXqFUlTmnkGnwIxyLmEGW8cqVkg02JQ562i5IBsjZBz1CDMnhD0CatDloDtGiTxsQfMrj7KXrfT2aO4QyIoXWkeeIXV_uM5LMks3TaKGaLExBePRG6N2snXbZDHYmCLRV2hOjfH44pkIcx23rVOrEF0fg2dPQflM"/>
+</div>
+
+<!-- Article Body -->
+<div class="prose-custom max-w-none">
+<p class="text-lg text-gray-600 leading-relaxed">
+  <strong class="text-brand-dark">In the heart of Kintampo, a quiet revolution is taking place.</strong> 
+  Children who once had limited access to technology and hands-on learning are now building robots, coding their first programs, and dreaming of futures they never thought possible.
+</p>
+
+<p>
+  Our STEM Explorers program, launched in partnership with local schools and community leaders, is designed to ignite curiosity and empower young minds through creative problem-solving and experimentation.
+</p>
+
+<h2>The Vision Behind the Program</h2>
+<p>
+  At Sua Ne Ani, we believe that every child deserves the opportunity to explore, create, and innovate. The STEM Explorers program was born from a simple but powerful idea: 
+  <strong>When children are given the tools to build, they also build confidence, resilience, and hope.</strong>
+</p>
+
+<blockquote>
+  <p>"When children are given the tools to build, they also build confidence, resilience, and hope."</p>
+</blockquote>
+
+<p>
+  The program currently serves over 200 children across 5 communities in the Bono East Region. Through weekly workshops, students engage in activities ranging from basic coding and robotics to environmental science and design thinking.
+</p>
+
+<h3>What the Program Includes</h3>
+<ul>
+  <li><strong>Hands-on Workshops:</strong> Students work in teams to solve real-world problems using science, technology, engineering, and math.</li>
+  <li><strong>Mentorship:</strong> Local teachers and volunteers guide students through projects, helping them develop critical thinking and collaboration skills.</li>
+  <li><strong>Access to Technology:</strong> Laptops, robotics kits, and other learning tools are provided to ensure every child has the resources they need.</li>
+  <li><strong>Community Showcases:</strong> At the end of each term, students present their projects to families, community leaders, and partners.</li>
+</ul>
+
+<h2>Stories from the Classroom</h2>
+<p>
+  One of the most remarkable stories comes from 12-year-old Ama, who had never used a computer before joining the program. Within two months, she had designed a simple weather monitoring app that she now uses to help her community track rainfall patterns for farming.
+</p>
+<p>
+  "I didn't know I could do this," Ama said with a bright smile. "Now I want to become an engineer and build things that help people."
+</p>
+
+<div class="bg-brand-lightGreen/50 rounded-2xl p-8 my-8 border-l-4 border-brand-green">
+  <p class="text-brand-dark font-bold text-lg mb-2">📊 Program Impact at a Glance</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+    <div class="text-center">
+      <p class="text-3xl font-extrabold text-brand-green">200+</p>
+      <p class="text-xs text-gray-500">Students Enrolled</p>
+    </div>
+    <div class="text-center">
+      <p class="text-3xl font-extrabold text-brand-yellow">5</p>
+      <p class="text-xs text-gray-500">Communities</p>
+    </div>
+    <div class="text-center">
+      <p class="text-3xl font-extrabold text-blue-500">20+</p>
+      <p class="text-xs text-gray-500">Volunteers</p>
+    </div>
+    <div class="text-center">
+      <p class="text-3xl font-extrabold text-purple-500">85%</p>
+      <p class="text-xs text-gray-500">Student Engagement</p>
+    </div>
+  </div>
+</div>
+
+<h2>Looking Ahead</h2>
+<p>
+  The success of the STEM Explorers program has sparked interest from neighboring districts and potential partners. We are currently planning to expand the program to reach 10 additional communities by the end of the year, with the goal of empowering over 500 young learners.
+</p>
+<p>
+  "This is just the beginning," says Ama Serwaa, Founder of Sua Ne Ani. "When we invest in a child's curiosity today, we are planting seeds for a brighter, more sustainable tomorrow."
+</p>
+
+<h3>How You Can Help</h3>
+<p>
+  The STEM Explorers program relies on the support of donors, volunteers, and partners. Here's how you can get involved:
+</p>
+<ul>
+  <li><strong>Donate:</strong> Your contributions help provide learning materials, technology, and resources for students.</li>
+  <li><strong>Volunteer:</strong> Share your skills and expertise as a mentor or workshop facilitator.</li>
+  <li><strong>Partner:</strong> Collaborate with us to bring STEM education to more communities.</li>
+</ul>
+
+<div class="bg-brand-yellow/10 rounded-2xl p-8 my-8 text-center border border-brand-yellow/30">
+  <p class="font-bold text-lg text-brand-dark mb-2">Together, we can shape the next generation of innovators.</p>
+  <a href="get-involved.html" class="inline-block bg-brand-green text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all mt-2">
+    Get Involved Today
+  </a>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
+  <span class="text-sm font-bold text-gray-500 mr-2">Tags:</span>
+  <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">STEM Education</span>
+  <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Innovation</span>
+  <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Community Impact</span>
+  <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Youth Development</span>
+</div>
+
+<!-- Author Bio -->
+<div class="mt-12 bg-gray-50 rounded-3xl p-8 flex flex-col sm:flex-row gap-6 items-start border border-gray-100">
+  <img alt="Author" class="w-20 h-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeorHJXoIEIw96avMNV-ujgZuFI4figDkSVtPBrAAhKfPz-HSs-9mCjVAyAum93ZI4f9R5xXVF0tG-lSTPv7o7ahuuxU8EVN6NZePs1zNTIEy-WfBMAE60jxQ2dyb_KcKBhTZ2xXE5JSObBxsG635eWFcn1S0K1AgmvwecBQKCoBHOgZnUft0fPwyn7XK8DYYLyPcCvWNMO7O0VWpi3_lh3xb2Y65suUQQxg0DK02nZUP9msBKlYjKJ6SxapPywpibhF1M2vfSXcK3"/>
+  <div>
+    <h4 class="font-bold text-lg text-brand-dark">Ama Serwaa</h4>
+    <p class="text-sm text-brand-green font-medium mb-2">Founder &amp; Executive Director, Sua Ne Ani</p>
+    <p class="text-sm text-gray-600 leading-relaxed">
+      Ama is passionate about education and community development. She believes that every child deserves the opportunity to learn, grow, and shape a brighter future.
+    </p>
+  </div>
+</div>
+
+<!-- Comments Section -->
+<div class="mt-12 pt-8 border-t border-gray-100">
+  <h3 class="text-2xl font-bold mb-6">Leave a Comment</h3>
+  <form class="space-y-4">
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+        <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-brand-green focus:border-brand-green" placeholder="Your full name"/>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+        <input type="email" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-brand-green focus:border-brand-green" placeholder="Your email address"/>
+      </div>
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Comment *</label>
+      <textarea rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-brand-green focus:border-brand-green" placeholder="Share your thoughts..."></textarea>
+    </div>
+    <button type="submit" class="bg-brand-green text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all">
+      Post Comment
+    </button>
+  </form>
+</div>
+</div>
+</div>
+
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- About the Author -->
+<div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+  <h4 class="font-bold text-lg mb-4">About the Author</h4>
+  <div class="flex items-center gap-4 mb-4">
+    <img alt="Author Avatar" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeorHJXoIEIw96avMNV-ujgZuFI4figDkSVtPBrAAhKfPz-HSs-9mCjVAyAum93ZI4f9R5xXVF0tG-lSTPv7o7ahuuxU8EVN6NZePs1zNTIEy-WfBMAE60jxQ2dyb_KcKBhTZ2xXE5JSObBxsG635eWFcn1S0K1AgmvwecBQKCoBHOgZnUft0fPwyn7XK8DYYLyPcCvWNMO7O0VWpi3_lh3xb2Y65suUQQxg0DK02nZUP9msBKlYjKJ6SxapPywpibhF1M2vfSXcK3"/>
+    <div>
+      <p class="font-bold text-brand-dark">Ama Serwaa</p>
+      <p class="text-xs text-gray-500">Founder, Sua Ne Ani</p>
+    </div>
+  </div>
+  <p class="text-sm text-gray-600 leading-relaxed">
+    Ama is a passionate advocate for education and community development. She founded Sua Ne Ani to create opportunities for children and youth to learn, grow, and thrive.
+  </p>
+</div>
+
+<!-- Categories -->
+<div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+  <h4 class="font-bold text-lg mb-4">Categories</h4>
+  <ul class="space-y-3">
+    <li class="flex items-center justify-between text-sm">
+      <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">All News</a>
+      <span class="text-gray-400 text-xs">24</span>
+    </li>
+    <li class="flex items-center justify-between text-sm">
+      <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">Announcements</a>
+      <span class="text-gray-400 text-xs">8</span>
+    </li>
+    <li class="flex items-center justify-between text-sm">
+      <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">Programs</a>
+      <span class="text-gray-400 text-xs">12</span>
+    </li>
+    <li class="flex items-center justify-between text-sm">
+      <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">Community Stories</a>
+      <span class="text-gray-400 text-xs">15</span>
+    </li>
+    <li class="flex items-center justify-between text-sm">
+      <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">Partnerships</a>
+      <span class="text-gray-400 text-xs">6</span>
+    </li>
+    <li class="flex items-center justify-between text-sm">
+      <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">Events</a>
+      <span class="text-gray-400 text-xs">9</span>
+    </li>
+  </ul>
+</div>
+
+<!-- Recent Posts -->
+<div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+  <h4 class="font-bold text-lg mb-4">Recent Posts</h4>
+  <div class="space-y-4">
+    <div class="flex gap-3">
+      <img alt="Recent post" class="w-16 h-16 rounded-xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8BGiYNS7NYQK1AmM4oO-LpDElCgglW1pFC1v7zCTjr6qmMv9BUp7VryuHhV-KdgTqpxVqyy_3qxDQulAXFXYER0zujBpUeRRCXgHK76etZ40d5TdffROLhhujhd6NSdYhLrVTNOSMyi7k9PtHggmdwPeLwBYOq_h12o0Btu7_omy1jw6ZQcaCel-uBES5-M2nzsLi7mt7VDpQlgcKdKT8HSV4HzLMd_qAQjLe47sF-Kh2yq3AWYT_"/>
+      <div>
+        <p class="text-[10px] text-gray-400">May 8, 2025</p>
+        <a href="#" class="text-sm font-bold text-brand-dark hover:text-brand-green transition-colors">New Reading Corner Opens in Kintampo</a>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <img alt="Recent post" class="w-16 h-16 rounded-xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR427WZ8b18fiYXC9LIkmg8uECx1_v6flaxA43I_OcFgPMto4xdhji-vWyd4MY91AzV5XK25Z21PGAGhcJBhVt9UDhPXu4ireUL1AOLU9K5NZGsh9Q86wgFRdLtt-1lmphCzDDzo0DR3xLV4E2keV6xMLn82ehtIPG4uMVmc2R6FVaIP5HvVNxdiOe3WvTZ2qgLbBxIgsPEtEZqBhWaWD6n0BMFtVcS-Cpl0CvZmt9ROjW60IGmv2U"/>
+      <div>
+        <p class="text-[10px] text-gray-400">April 28, 2025</p>
+        <a href="#" class="text-sm font-bold text-brand-dark hover:text-brand-green transition-colors">Partnership with Green Future Foundation</a>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <img alt="Recent post" class="w-16 h-16 rounded-xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOXrr5jjXMjXvgiW46ggNkXGMbQFGc3w808fJbRVsoFp9K04j6-vWeHEvMmoF-L8TIFg5dHVeZ5k74FpQ9ntSkGG7TREPi81yYehWmn346YvDOMyJ2RRRK7yXMqctGPXZhHeYUsxB58kv7rLyS5K1lGqAD_WdV6dpmTsP9YmQS8IcyZNHged_jwITtuqcr4Op86--hy4dT9zgfns5QveuoobfigzW8WDo-jA1gYbcyskH1rb6BdXGs"/>
+      <div>
+        <p class="text-[10px] text-gray-400">April 20, 2025</p>
+        <a href="#" class="text-sm font-bold text-brand-dark hover:text-brand-green transition-colors">STEM Workshop for Kids A Big Success!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Newsletter -->
+<div class="bg-brand-lightGreen/50 p-6 rounded-2xl border border-brand-green/20">
+  <h4 class="font-bold text-lg mb-2">Subscribe for Updates</h4>
+  <p class="text-sm text-gray-600 mb-4">Get the latest news and stories delivered to your inbox.</p>
+  <div class="space-y-3">
+    <input type="email" placeholder="Your email address" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-brand-green focus:border-brand-green text-sm"/>
+    <button class="w-full bg-brand-green text-white font-bold py-3 rounded-xl hover:bg-opacity-90 transition-all text-sm">
+      Subscribe
+    </button>
+  </div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- END: Article Content -->
+
+<!-- BEGIN: Related Articles -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between mb-10">
+  <h2 class="text-3xl font-extrabold text-brand-dark">Related <span class="text-brand-green">Articles</span></h2>
+  <a href="news.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+    View All News <span>→</span>
+  </a>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+  <!-- Related Article 1 -->
+  <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow group">
+    <img alt="Related article" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8BGiYNS7NYQK1AmM4oO-LpDElCgglW1pFC1v7zCTjr6qmMv9BUp7VryuHhV-KdgTqpxVqyy_3qxDQulAXFXYER0zujBpUeRRCXgHK76etZ40d5TdffROLhhujhd6NSdYhLrVTNOSMyi7k9PtHggmdwPeLwBYOq_h12o0Btu7_omy1jw6ZQcaCel-uBES5-M2nzsLi7mt7VDpQlgcKdKT8HSV4HzLMd_qAQjLe47sF-Kh2yq3AWYT_"/>
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-3">
+        <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Programs</span>
+        <span class="text-[11px] text-gray-400">May 8, 2025</span>
+      </div>
+      <h3 class="font-bold text-lg mb-2 group-hover:text-brand-green transition-colors">New Reading Corner Opens in Kintampo Community</h3>
+      <p class="text-sm text-gray-600 mb-4">A new reading space has been opened to promote literacy and a love for books among children.</p>
+      <a href="#" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+    </div>
+  </article>
+
+  <!-- Related Article 2 -->
+  <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow group">
+    <img alt="Related article" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR427WZ8b18fiYXC9LIkmg8uECx1_v6flaxA43I_OcFgPMto4xdhji-vWyd4MY91AzV5XK25Z21PGAGhcJBhVt9UDhPXu4ireUL1AOLU9K5NZGsh9Q86wgFRdLtt-1lmphCzDDzo0DR3xLV4E2keV6xMLn82ehtIPG4uMVmc2R6FVaIP5HvVNxdiOe3WvTZ2qgLbBxIgsPEtEZqBhWaWD6n0BMFtVcS-Cpl0CvZmt9ROjW60IGmv2U"/>
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-3">
+        <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Partnerships</span>
+        <span class="text-[11px] text-gray-400">April 28, 2025</span>
+      </div>
+      <h3 class="font-bold text-lg mb-2 group-hover:text-brand-green transition-colors">Partnership with Green Future Foundation</h3>
+      <p class="text-sm text-gray-600 mb-4">Together, we are planting trees and building awareness on environmental sustainability.</p>
+      <a href="#" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+    </div>
+  </article>
+
+  <!-- Related Article 3 -->
+  <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow group">
+    <img alt="Related article" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOXrr5jjXMjXvgiW46ggNkXGMbQFGc3w808fJbRVsoFp9K04j6-vWeHEvMmoF-L8TIFg5dHVeZ5k74FpQ9ntSkGG7TREPi81yYehWmn346YvDOMyJ2RRRK7yXMqctGPXZhHeYUsxB58kv7rLyS5K1lGqAD_WdV6dpmTsP9YmQS8IcyZNHged_jwITtuqcr4Op86--hy4dT9zgfns5QveuoobfigzW8WDo-jA1gYbcyskH1rb6BdXGs"/>
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-3">
+        <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-600 px-2 py-1 rounded">Events</span>
+        <span class="text-[11px] text-gray-400">April 20, 2025</span>
+      </div>
+      <h3 class="font-bold text-lg mb-2 group-hover:text-brand-green transition-colors">STEM Workshop for Kids A Big Success!</h3>
+      <p class="text-sm text-gray-600 mb-4">Hands-on activities, teamwork, and innovation made our STEM workshop unforgettable.</p>
+      <a href="#" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+    </div>
+  </article>
+</div>
+</div>
+</section>
+<!-- END: Related Articles -->
+
+<!-- BEGIN: CallToAction -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<div class="bg-brand-yellow rounded-[2.5rem] p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
+  <div class="absolute inset-0 honeycomb-pattern"></div>
+  <div class="flex flex-col lg:flex-row items-center gap-8 relative z-10 text-center lg:text-left">
+    <img alt="Bee Mascot" class="w-24 lg:w-32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO1pQISeTzHdnqWl_V9fBFT4T-QMfDZYe0I61HFY-wA2jkXfORFiOGvyf6JN38_K3O9VbV4X_J8Wnm0gQ2hnX8E84tGgl6KD5L0XIXWUw25LK6afXXbuFPSeZ_H8S4a_1IbfjcjTB5CmezjEYqLYcM0chSVvUSGjFBf_1EKV2rKqZQkF6pR4PiFRS-iiMbS9wr0t8-WkU-f8SnWsw4tqADWhq7bw4q590NDy3qsDU8S1ZFLvNt40gD"/>
+    <div>
+      <h2 class="text-3xl lg:text-4xl font-extrabold mb-2">Inspired by What You've Read?</h2>
+      <p class="text-brand-dark/80 font-medium max-w-lg">Be part of the story. Your support helps us continue creating impact and sharing stories that matter.</p>
+    </div>
+  </div>
+  <button class="relative z-10 bg-brand-green text-white font-bold py-4 px-10 rounded-full flex items-center gap-3 group hover:scale-105 transition-transform">
+    Get Involved Today
+    <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+  </button>
+</div>
+</div>
+</section>
+<!-- END: CallToAction -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          // Fallback: try to initialize from the header's script
+          console.log('Header script not loaded, trying to initialize manually');
+          const scriptTag = document.createElement('script');
+          // The header's script will run when the HTML is inserted
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sua Ne Ani | Real Change. Stronger Future.</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#f5a623',
+              dark: '#1a1a1a',
+              green: '#2d5a27',
+              cream: '#fffdf5',
+              border: '#e5e7eb'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #fffdf5;
+    }
+    .bee-dashed-path {
+      stroke-dasharray: 8, 8;
+    }
+    .impact-card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    .story-card-img {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Active nav link styling - matches header */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="text-brand-dark font-sans selection:bg-brand-yellow/30">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: Hero Section -->
+<section class="relative pt-12 pb-24 overflow-hidden px-6">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10" data-purpose="hero-content">
+<span class="text-brand-green font-bold text-sm tracking-widest uppercase mb-4 block">OUR IMPACT</span>
+<h1 class="text-6xl lg:text-7xl font-extrabold text-brand-dark leading-[1.1] mb-6">
+          Real Change.<br/>
+<span class="text-brand-green">Stronger Future.</span>
+</h1>
+<p class="text-lg text-gray-600 max-w-lg mb-8 leading-relaxed">
+          Every project, every lesson, every small action contributes to a more educated, compassionate and sustainable world.
+        </p>
+<button class="bg-brand-yellow text-brand-dark font-bold px-8 py-4 rounded-full flex items-center gap-3 hover:shadow-lg transition-all">
+          <a href="programs.html">See Our Programs</a>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="relative" data-purpose="hero-imagery">
+<!-- Main children photo area -->
+<div class="relative rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Children engaging in community projects" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfR423HM3rH6kzV5RCsqZzuxrNhZJ_-rFE0WP0mjRtfXaa40KM5hoJvXmptSX85jSo5yl16njT8cQfJIKYhdsojL0u4ysAW9BE8AcHCKfhlD0zHrE2so5A7uTRaGWwRuohcYBjNIZjK-pEu9AGOFYPfKqCJPwnc3v259789vtvFFRdl6WmM4PFZLaJhyeFOn_TaMp5VOu-hpOggA6ANyYOjGePe64arSZGYyciBGM3Y6qhnzaluY6z"/>
+<!-- Circular Badge Overlay -->
+<div class="absolute bottom-6 right-6 bg-white p-6 rounded-full shadow-xl max-w-[180px] text-center border-4 border-brand-green/10">
+<img alt="Bee Mascot" class="mx-auto mb-2" src="images/bee.png"/>
+<p class="text-xs font-bold leading-tight">Learning Today, Transforming Tomorrow.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+
+<!-- BEGIN: Impact Numbers – numbers removed as requested -->
+<section class="bg-white py-16 px-6 border-y border-gray-100">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<p class="text-xs font-bold text-brand-green uppercase tracking-widest">OUR IMPACT BY THE NUMBERS</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+<!-- Stat Item – number removed -->
+<div class="text-center">
+<div class="text-brand-green mb-2 flex justify-center">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<!-- number removed -->
+<p class="text-sm font-semibold text-gray-500">Communities Reached</p>
+</div>
+<!-- Stat Item -->
+<div class="text-center">
+<div class="text-brand-yellow mb-2 flex justify-center">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<p class="text-sm font-semibold text-gray-500">Learners Empowered</p>
+</div>
+<!-- Stat Item -->
+<div class="text-center">
+<div class="text-blue-500 mb-2 flex justify-center">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<p class="text-sm font-semibold text-gray-500">Volunteers &amp; Educators</p>
+</div>
+<!-- Stat Item -->
+<div class="text-center">
+<div class="text-brand-green mb-2 flex justify-center">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<p class="text-sm font-semibold text-gray-500">Active Projects</p>
+</div>
+<!-- Stat Item -->
+<div class="text-center">
+<div class="text-orange-500 mb-2 flex justify-center">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<p class="text-sm font-semibold text-gray-500">Partners &amp; Supporters</p>
+</div>
+<!-- Stat Item -->
+<div class="text-center">
+<div class="text-blue-700 mb-2 flex justify-center">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<p class="text-sm font-semibold text-gray-500">Regions Impacted</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Impact Numbers -->
+
+<!-- BEGIN: Who We Impact – numbers removed from cards -->
+<section class="py-24 px-6 bg-brand-cream">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<p class="text-xs font-bold text-brand-green uppercase tracking-widest mb-2">WHO WE IMPACT</p>
+<h2 class="text-4xl font-extrabold">Empowering Individuals. <span class="text-brand-green">Strengthening Communities.</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<!-- Card 1 – number removed -->
+<div class="impact-card bg-orange-50/50 p-6 rounded-2xl border border-orange-100 flex flex-col h-full">
+<div class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-orange-500 mx-auto">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<!-- number removed -->
+<p class="text-xs font-bold text-center mb-4">Children &amp; Youth</p>
+<p class="text-[10px] text-gray-500 text-center mb-6 flex-grow leading-relaxed">Accessing quality education and skills development.</p>
+<img alt="Child" class="w-full aspect-square rounded-xl object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyE-O4bUi5O9JJjmEDchFz0SuGKxcl_FjPz76fqksK6T4CIDtDMYE6oR9s4wLOexvrMvCV-n43QH_ELmgG71S2Z2PCPlpv9EEoIzashQ2JU2av-PRW0F-j5RDGIG4vHLFgJ_FGKsn2pXnJmB4O0skvfHalUxv_LwqE3GovgvmMCWIFr47w427XJ5ez0tI88HD5vhhMcVuWbYE39moCJWfND1yAwU2ItkFX7tUOAfODgGqM556uGwr4"/>
+</div>
+<!-- Card 2 -->
+<div class="impact-card bg-green-50/50 p-6 rounded-2xl border border-green-100 flex flex-col h-full">
+<div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-green-600 mx-auto">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+</div>
+<p class="text-xs font-bold text-center mb-4">Teachers &amp; Educators</p>
+<p class="text-[10px] text-gray-500 text-center mb-6 flex-grow leading-relaxed">Trained and supported to deliver better learning experiences.</p>
+<img alt="Teacher" class="w-full aspect-square rounded-xl object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy8-US5lkHI0bHtOW-k2x53ySre1f_9sHFz00IPcp4hVjnsI8t96Objzy6rQq4UTWtxPDtQHlqK4t6BUhPM6YXAT_J5NWa9FgiuocVdzVaq2rcU6RZsaky9LYSATZsndsPdFEAMMDF1BjdBDYiuW1cqwiVpR-RUHGMklfNZzo2c0-Vbo_994cVdUkcTvnTz15cqVoV-y_fzA5q3Ck1nSxUrH3ryCTWJ20Nr8TByqJCLUM--d_qKlDy"/>
+</div>
+<!-- Card 3 -->
+<div class="impact-card bg-blue-50/50 p-6 rounded-2xl border border-blue-100 flex flex-col h-full">
+<div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-blue-600 mx-auto">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-xs font-bold text-center mb-4">Communities</p>
+<p class="text-[10px] text-gray-500 text-center mb-6 flex-grow leading-relaxed">Engaged in sustainable projects that create lasting change.</p>
+<img alt="Community" class="w-full aspect-square rounded-xl object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs3pHq46cLPwTaEgOodStmRJ2H2wzfkyOBU7KVdW_gT-10yNNRGhvXxLoNCLr3oVnbjNENe7sLTalzUYEaPPK0zp5sEf0VVQeUgeOq1RYC60JzEt0X3KyAIC4zv6ibQgSeMKDD10rexv6whYU7NHIv1_W-D24ahmtWqpY3ZHiRjFAJ7M_gN3KoY23bRkRlHoSmITTO5WA5aMKJBJk9vfraZCmd5oHD1DpgkVPf3YdFDKH0Uwul8QL-"/>
+</div>
+<!-- Card 4 -->
+<div class="impact-card bg-purple-50/50 p-6 rounded-2xl border border-purple-100 flex flex-col h-full">
+<div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-purple-600 mx-auto">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-xs font-bold text-center mb-4">Environmental Projects</p>
+<p class="text-[10px] text-gray-500 text-center mb-6 flex-grow leading-relaxed">Promoting conservation, climate action and biodiversity.</p>
+<img alt="Environment" class="w-full aspect-square rounded-xl object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhQCx-F0lcobu1cKPj-tFPBek5JAq6ApPjmLGhD86cGsa8l2zRlvOmhu4J2r2ipkEZpF64fTq0T83DnL0-pE4mpup-qaCj36IhWqZkT3PNC1Z4EiQOMC7pk3ij7qTLrWP4cw7agMxQceDnyiJ5xuE23SuUdNqB2msGch49oAAcEdtusvo4JQVJjbaSV1FGiNCGK0T95vjkuFdSvKPPJckH53COsikeflTrOHqWW_1a1sJ79Xisk8bs"/>
+</div>
+<!-- Card 5 -->
+<div class="impact-card bg-yellow-50/50 p-6 rounded-2xl border border-yellow-100 flex flex-col h-full">
+<div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-yellow-600 mx-auto">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-xs font-bold text-center mb-4">Innovation Labs</p>
+<p class="text-[10px] text-gray-500 text-center mb-6 flex-grow leading-relaxed">Nurturing creativity, curiosity and problem solving.</p>
+<img alt="Lab" class="w-full aspect-square rounded-xl object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXUHgF-hQ3h4pIBz17R95VZWAL0EQ_bx3jV1vKHDB_BPUx-664NpTdBFCo_PmPtkoL-AuFx868YvuqdBZ78P3P1pPNgco5X4b8snnRH8uvfs1jmcjp6oFfgFM40FMYTO4PjHXS11uADL5m94vxxFChD40feYIRJtpF9PDkt6jicNgAEIMFSm5wvpCr87D5wvT4XPfPIOC7GW5IGAnlmvWMoY4SGOKKFeWORq1mc3rU_dET8KIjMw6U"/>
+</div>
+<!-- Card 6 -->
+<div class="impact-card bg-teal-50/50 p-6 rounded-2xl border border-teal-100 flex flex-col h-full">
+<div class="bg-teal-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 text-teal-600 mx-auto">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<p class="text-xs font-bold text-center mb-4">Volunteers</p>
+<p class="text-[10px] text-gray-500 text-center mb-6 flex-grow leading-relaxed">Giving their time, talents and passion to drive our mission.</p>
+<img alt="Volunteers" class="w-full aspect-square rounded-xl object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxY-T2uq2rN8vD68nMZQFdqm-Bj7wgMZsVLOJqVoqgcklI7QuJnkUrbXVXqy0U-ncNXV1KIPY08EPPvfkO36gfiMgm6z-H6_7bG3EBMg51mVtb7XXXU7k1DmAYUe40-pK0Ubnv89VByg7ewI7td6-zd5794C-nUWMS0uewICH_K0gcqmCT5panWer64ezJMR-LIDqCNrAqebfIcX-4yWZiYb4Sc6KATcFGV9tcC4AGdWRSJKGM_Pfc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Who We Impact -->
+
+<!-- BEGIN: Areas of Impact -->
+<section class="py-24 px-6 bg-white overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<span class="text-brand-green font-bold text-sm tracking-widest uppercase mb-4 block">AREAS OF IMPACT</span>
+<h2 class="text-5xl font-extrabold mb-6">Building a <span class="text-brand-yellow">Better World</span> Together</h2>
+<p class="text-gray-600 mb-10 leading-relaxed max-w-lg">
+          Our work spans multiple areas that are essential to the growth and well-being of individuals and the planet we all share.
+        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<!-- Pillar 1 -->
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-brand-green rounded-xl flex items-center justify-center text-white shadow-lg">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-1">Quality Education</h4>
+<p class="text-xs text-gray-500 leading-relaxed">Improving access to inclusive and meaningful education.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-1">Community Development</h4>
+<p class="text-xs text-gray-500 leading-relaxed">Strengthening communities through collaboration.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-brand-yellow rounded-xl flex items-center justify-center text-white shadow-lg">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-6.364l-.707-.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-1">Skills Development</h4>
+<p class="text-xs text-gray-500 leading-relaxed">Equipping learners with digital, STEM and life skills.</p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="flex gap-4">
+  <div class="shrink-0 w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+    <i class="fas fa-chalkboard-user text-2xl"></i>
+  </div>
+  <div>
+    <h4 class="font-bold text-sm mb-1">Teacher Support &amp; Development</h4>
+    <p class="text-xs text-gray-500 leading-relaxed">Empowering educators with training, resources and professional growth.</p>
+  </div>
+</div>
+</div>
+<!-- CHANGED button: from "Explore Our Programs" to "Innovation & Research" -->
+<button class="mt-12 bg-brand-yellow text-brand-dark font-bold px-8 py-4 rounded-full flex items-center gap-3">
+          <a href="programs.html">Explore Our Programs</a>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="lg:w-1/2 relative flex justify-center">
+<!-- Bee Illustration Path -->
+<div class="relative w-full max-w-md">
+<img alt="Bee Illustration" class="w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1zluypOALufWiDxrnMV6sMNzwlsJsn6M7ueWlLKF6vtgo-G9PEotRRhcRwM99-LzmDvHhnka6Bhdc4jqBduXnB4UPa47oDQaNlCFcTFapRlUj51WF0QberxZ6cG402wGTbt4SHAEvq5KIxntMaaWg9gPpGFlP1N4YVFfDFJbRDW6h_LwpLzP12gD9eXh2NtwldV5zUf7d7GCysqz9dcpHZXAJ8btcESPNjQKMukjs_UJzEcoLMGZG"/>
+<!-- Animated element path (conceptual) -->
+<svg class="absolute top-0 left-0 w-full h-full pointer-events-none" viewbox="0 0 400 500">
+<path class="bee-dashed-path" d="M100,100 Q200,50 300,150 T400,300" fill="none" stroke="#f5a623" stroke-dasharray="8 8" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Areas of Impact -->
+
+<!-- BEGIN: Stories of Change – REMOVED as requested -->
+<!-- (section removed) -->
+
+<!-- BEGIN: Our Partners – REMOVED as requested -->
+<!-- (section removed) -->
+
+<!-- BEGIN: Call to Action Banner (kept) -->
+<section class="px-6 mb-24">
+<div class="max-w-7xl mx-auto bg-brand-yellow rounded-[40px] p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-6 relative z-10">
+<div class="bg-white/20 p-4 rounded-full">
+<img alt="Bee Mascot" class="w-20 h-20" src="images/bee.png"/>
+</div>
+<div>
+<h2 class="text-3xl md:text-4xl font-extrabold mb-2">Your Support Multiplies Our Impact</h2>
+<p class="text-brand-dark/80 font-medium">Together, we can reach more learners, empower more communities and build a better future.</p>
+</div>
+</div>
+<button class="bg-brand-dark text-white font-bold px-10 py-4 rounded-full hover:bg-black transition-all relative z-10 flex items-center gap-2">
+        <a href="get-involved.html">Get Involved Today</a>
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<!-- Decorative paths -->
+<svg class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20" viewbox="0 0 1000 200">
+<path d="M0,100 Q250,150 500,100 T1000,100" fill="none" stroke="black" stroke-dasharray="10 10" stroke-width="2"></path>
+</svg>
+</div>
+</section>
+<!-- END: Call to Action Banner -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          // Fallback: try to initialize from the header's script
+          console.log('Header script not loaded, trying to initialize manually');
+          const scriptTag = document.createElement('script');
+          // The header's script will run when the HTML is inserted
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>

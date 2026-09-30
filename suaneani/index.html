@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sua Ne Ani · Vision.Knowledge.Transformation</title>
+  <!-- Tailwind + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F5A623',
+            secondary: '#4A90E2',
+            accent: '#7ED321',
+            dark: '#333333',
+            lightBg: '#FFFDF9',
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* mobile slide-in menu */
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .mobile-menu-panel {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      max-width: 80vw;
+      height: 100%;
+      background: white;
+      z-index: 110;
+      padding: 2rem 1.5rem;
+      transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: -8px 0 30px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-menu-panel.open {
+      right: 0;
+    }
+    .mobile-menu-panel .close-btn {
+      align-self: flex-end;
+      font-size: 1.8rem;
+      color: #1e293b;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 0.5rem;
+    }
+    .mobile-menu-panel a {
+      font-weight: 500;
+      color: #1e293b;
+      padding: 0.6rem 0.8rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: background 0.15s;
+      font-size: 1rem;
+    }
+    .mobile-menu-panel a:hover {
+      background: #fef3c7;
+      color: #d97706;
+    }
+    .mobile-menu-panel a i {
+      width: 1.5rem;
+      color: #f5a623;
+    }
+    .mobile-menu-panel .donate-mobile {
+      margin-top: auto;
+      background: #f5a623;
+      color: white !important;
+      border-radius: 40px;
+      justify-content: center;
+      padding: 0.9rem;
+      font-weight: 600;
+    }
+    .mobile-menu-panel .donate-mobile i {
+      color: white;
+    }
+    .mobile-menu-panel .donate-mobile:hover {
+      background: #d97706;
+    }
+    body.no-scroll { overflow: hidden; }
+
+    /* Hero with background image - full bleed, no shadow */
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: #fcf9f5;
+      overflow: hidden;
+    }
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(252,249,245,0.92) 0%, rgba(252,249,245,0.7) 50%, rgba(252,249,245,0.3) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 0;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .hero-overlay {
+        background: linear-gradient(135deg, rgba(252,249,245,0.95) 0%, rgba(252,249,245,0.6) 60%, rgba(252,249,245,0.2) 100%);
+      }
+    }
+    
+    /* Active nav link styling */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="bg-lightBg text-gray-800 font-sans">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <img src="images/hero-bg.png" alt="Hero Background" class="hero-background"/>
+  <div class="hero-content container mx-auto px-4">
+    <div class="max-w-2xl">
+      <span class="text-orange-600 font-bold tracking-widest text-sm uppercase inline-block bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full mb-4">
+        <i class="fas fa-eye mr-2"></i>Vision. Knowledge. Transformation.
+      </span>
+      <h1 class="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+        <span class="text-primary italic">Vision.</span><span class="text-primary italic">Knowledge.</span><br/>
+        <span class="text-primary italic">Transformation.</span>
+      </h1>
+      <p class="text-xl font-semibold text-slate-800 mt-4">SuaNeAni: Empowering minds to elevate humanity</p>
+      <p class="text-gray-700 mt-4 text-base sm:text-lg max-w-lg leading-relaxed bg-white/60 backdrop-blur-sm p-4 rounded-2xl inline-block">
+        Building Ghana’s most robust, connected learning ecosystem—giving institutions the vision to connect fragmented educational resources and the power to scale impact modern, equitable, and culturally grounded learning to every mind, from early childhood through adulthood.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a class="bg-primary text-white px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:shadow-lg transition-all hover:bg-orange-600" href="about.html">
+          Explore Our Story <i class="fas fa-arrow-right"></i>
+        </a>
+        <a class="border-2 border-slate-800 text-slate-800 px-8 py-3 rounded-full font-bold hover:bg-slate-800 hover:text-white transition-all bg-white/80 backdrop-blur-sm" href="get-involved.html">
+          <i class="fas fa-rocket mr-2"></i>Join Our Mission
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CORE VALUES SECTION REMOVED ===== -->
+
+<!-- ===== TIMELINE SECTION REMOVED (moved to About) ===== -->
+
+<!-- PROGRAMS (unchanged) -->
+<section class="py-20 relative overflow-hidden" style="background: #fcf9f5;">
+  <img src="images/programs-bg.png" alt="Programs Background" class="absolute inset-0 w-full h-full object-cover z-0"/>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-bold uppercase tracking-widest text-sm bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full inline-block"><i class="fas fa-th-large mr-2"></i>What We Do</span>
+      <h2 class="text-4xl font-bold mt-2">Our Programs</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="w-64 text-center p-6 bg-yellow-50/90 backdrop-blur-sm rounded-[40px] shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+        <div class="bg-orange-500 text-white w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4"><i class="fas fa-laptop text-xl"></i></div>
+        <h4 class="font-bold mb-2">Digital Learning</h4>
+        <p class="text-xs text-gray-600">Empowering learners with digital skills.</p>
+      </div>
+      <div class="w-64 text-center p-6 bg-green-50/90 backdrop-blur-sm rounded-[40px] shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+        <div class="bg-green-500 text-white w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4"><i class="fas fa-chalkboard-teacher text-xl"></i></div>
+        <h4 class="font-bold mb-2">Teacher Development</h4>
+        <p class="text-xs text-gray-600">Training educators to inspire.</p>
+      </div>
+      <div class="w-64 text-center p-6 bg-blue-50/90 backdrop-blur-sm rounded-[40px] shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+        <div class="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4"><i class="fas fa-flask text-xl"></i></div>
+        <h4 class="font-bold mb-2">STEM Education</h4>
+        <p class="text-xs text-gray-600">Making science & math exciting.</p>
+      </div>
+      <div class="w-64 text-center p-6 bg-orange-50/90 backdrop-blur-sm rounded-[40px] shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+        <div class="bg-orange-600 text-white w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4"><i class="fas fa-users text-xl"></i></div>
+        <h4 class="font-bold mb-2">Community Projects</h4>
+        <p class="text-xs text-gray-600">Building stronger communities.</p>
+      </div>
+      <div class="w-64 text-center p-6 bg-teal-50/90 backdrop-blur-sm rounded-[40px] shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+        <div class="bg-teal-500 text-white w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4"><i class="fas fa-user-graduate text-xl"></i></div>
+        <h4 class="font-bold mb-2">Youth Leadership</h4>
+        <p class="text-xs text-gray-600">Developing young leaders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT (updated) -->
+<section class="py-20 bg-slate-50 overflow-hidden">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-1/2">
+      <span class="text-orange-500 font-bold uppercase tracking-widest text-sm"><i class="fas fa-chart-line mr-2"></i>Our Impact</span>
+      <h2 class="text-4xl font-bold mt-2">Creating <span class="text-green-600">Change</span> Together</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <!-- 89% -->
+        <div class="border-l-4 border-orange-500 pl-6">
+          <p class="text-5xl font-bold text-slate-800">89%</p>
+          <p class="text-gray-500 text-sm">of children in <span class="font-semibold">learning poverty</span></p>
+          <p class="text-xs text-gray-400 mt-1">Only 11% can read an age‑appropriate text by age 10</p>
+        </div>
+        <!-- 8.1 Million -->
+        <div class="border-l-4 border-blue-500 pl-6">
+          <p class="text-5xl font-bold text-slate-800">8.1M</p>
+          <p class="text-gray-500 text-sm">children in primary (4.8M) & secondary (3.3M) with <span class="font-semibold">insufficient access</span></p>
+          <p class="text-xs text-gray-400 mt-1">To quality education or digital tools</p>
+        </div>
+        <!-- Teacher Shortage -->
+        <div class="border-l-4 border-red-500 pl-6">
+          <p class="text-5xl font-bold text-slate-800">⟡</p>
+          <p class="text-gray-500 text-sm"><span class="font-semibold">Teacher shortage</span> compounding the crisis</p>
+          <p class="text-xs text-gray-400 mt-1">Up-date (JoyNews, 19.2.25) – National Education Forum</p>
+        </div>
+      </div>
+      <!-- 1 million children by 2028 -->
+      <div class="mt-8 bg-orange-100/70 backdrop-blur-sm rounded-2xl p-4 inline-block">
+        <p class="text-2xl font-bold text-orange-700"><i class="fas fa-bullseye mr-2"></i>1 million children by 2028</p>
+        <p class="text-sm text-gray-600">Our commitment to reach 1 million learners with quality education.</p>
+      </div>
+    </div>
+    <div class="md:w-1/2 relative">
+      <div class="bg-yellow-400 absolute -top-4 -left-4 w-full h-full rounded-3xl -z-10"></div>
+      <img alt="Impact Photo – children learning" class="rounded-3xl shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS8rx0ZNGZDZL530FoitZ6XOK27D6t-rbKg2hIgaFEAzhzAr3e8Iytvl0UlyS1XJ8p2Y0a2-a4i4uXf-apDrkD0reTvoTM8H3qF1woOaUbPfMnEi6_TAwUtJ2E12TlWzkn5ReO0Om19EQFfYtCI7zWG7MfHMva2T3jfhM59Wjmj8rQw_h07zd2hrACMbgd15Z8c14ru0wNuaEgTDFFwWVl9kcIUqOXkzxneaDet1gKPceznfkIlYUQLvbOcg7V7zQnMc8XjEiUhdhP"/>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (unchanged) 
+<section class="py-20 bg-white"><div class="container mx-auto px-4"><div class="text-center mb-12"><span class="text-orange-500 font-bold uppercase tracking-widest text-sm"><i class="fas fa-images mr-2"></i>Gallery</span><h2 class="text-4xl font-bold mt-2">Moments That Inspire</h2></div><div class="grid grid-cols-2 md:grid-cols-5 gap-4"><img alt="Gallery" class="rounded-xl object-cover h-48 w-full hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS53hCkdlb3AJ4crxqPEuXvob-0HiQt7hr-TPrlOy_vCTO_X46Vcp-b_APrIjA0dG-dCZ_gS3H-D_uVheN3YPTroWLWZMUp9kqXM24O9o_ac5OUjYRPEwintKToQU17Yn9UrlGqCQs6JD2iJmnsH4hpZJJ2CAkdvz40rRP2hYc64-ojYhrh407lCb9Frw84Io_Q_W2OPLqlmhupv5IlPs14pQHR_xnLQDisYFlnNQ8BHHT3USCHB83v9jVuecwP_ziRRy4SR22O95K"/><img alt="Gallery" class="rounded-xl object-cover h-48 w-full hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKIGa5CK6Cwpf1FL-dmfRE4J36S0PtyAM79n2aw5cWyROW4lyZNwUFQAHuOuNRSATxyFWWIbLonwBB6LBSaiUpXvK4n_gkIKV2eX_Z8uIRkh4LBkFXDSjiWMgdWYqrKtdC0raxoMoQGSQ_pGSD_3YLRh2P-3htc1EX65aNbrplHWbbrPM4cl808AQfgtxob_VTNEcj-HCKzvit-mnOsM7_wqzp6cSlVSgwGP-7OtFvAqWIPyuDQK9LSrwwU7lad28M0qOCJ5o3PcyJ"/><img alt="Gallery" class="rounded-xl object-cover h-48 w-full hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeN9KvFi8ePfV4X109oS9J3nNcteY0bLzv3AJMqQSiRMeqDd5DyKGJPIwe2lJIrpsB6rQNGfIAAiSIeEd1P7Rt9QAIV6mEW1tdzVbJZfCr3hqXCY0z0dWcQOC55SHfpStP7-WFlJiDvaLtkyJ9QIpIFPEyJV1Q03iXZH0FW33fceh5e_5rrkjJ57rjxBhfymFPn8iJGi1NCEI2kioJSS3aE-IUC4R0omaRuMDmEzaX2sQdw4gXXi251c9EgpvsPGeCDkO6FYOKWs81"/><img alt="Gallery" class="rounded-xl object-cover h-48 w-full hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL_mBq9M6aS_iAXVL11FsI_hJwEdrIsQqA1Ie8YypPPwxhZxOOZQrEd0YV5EAMN_gllEBHRtjX3VcpQZTzDp8Z6DzttLa1PZBWkE35akSnstAnFFlNdE6qEUQ8C5Mobjq_XVCEMwM36mGu756yUFdnOXjkiJh-Lm31o8YNgAxH54G_Ppvt79NfGNSS73cxVvtXae-3r83gOVHgRa0w2kY_i_Ptmpeb2XnH-daxupFjvTbTJKP6w6MArMdVwxd4KCcg_dpr3K01YDeY"/><img alt="Gallery" class="rounded-xl object-cover h-48 w-full hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3ySyrjBxQU8opYScM_6uVw8Th2786H2UnTGPD4PrrYoBlEA1PQGiynjP0PlKhZjUojLWSQ0s9X4JyQBY8ESK3RloGSik8BkJjm2ol73oI8xaGYAleZL4WKq55yPTk99XFPa7ab7Kq57lMKnTQ_Xw-SGFcsDv_QtwSYd6EbtikblKBgyA_ENw3QXXYNAi3Hn3wtEP8QbntqZAPjPRgO8C9pttVSVx4o6uMPO4szYH3ABR4Qy6Lhae7iXZXoA_225YFJDXL6hxG8W2s"/></div><div class="mt-10 text-center"><a class="border-2 border-orange-200 text-orange-500 px-8 py-2 rounded-full font-bold hover:bg-orange-500 hover:text-white transition-all" href="gallery.html"><i class="fas fa-arrow-right mr-2"></i>View More Photos</a></div></div></section> -->
+
+<!-- TESTIMONIALS (updated) -->
+<section class="py-20 bg-yellow-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-bold uppercase tracking-widest text-sm"><i class="fas fa-quote-left mr-2"></i>What People Say</span>
+      <h2 class="text-4xl font-bold mt-2">Voices of Our Community</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Student -->
+      <div class="bg-white p-8 rounded-3xl relative shadow-sm">
+        <div class="absolute -top-4 left-8 text-6xl text-orange-200"><i class="fas fa-quote-left"></i></div>
+        <p class="text-gray-600 mb-8 pt-4">“I can’t wait to use it – it makes learning so exciting!”</p>
+        <div class="flex items-center gap-4">
+          <img alt="Student" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALEG8a6eev8bc71yYZ4AUklYh2Si2jVt5ZDMbC8fqx-1yUYFe1uaP2EWiA2lgSlTk1EEESTt35J39Vmw-DmmZKn4MXv-eq_5wKt7h-rY7_Ah2zCrO-WTzBzB_5X0Yrq3rqmbV6iCxjQ43pIFkSzll26XBo5V7HksB99ZoxEYC7ZgBeOK1JW-kB_PuRHVQEtVTViKy9JYkxUeIuu90OBW_HMMgvAhTrvQAf0vlgPWBKdl3-mSAnQb_s0f2D7nHX_J9KlOg8yvJaIuoJ"/>
+          <div><h5 class="font-bold">Student</h5><p class="text-xs text-orange-500">Learner</p></div>
+        </div>
+      </div>
+      <!-- Teacher (Peter from North Legon) -->
+      <div class="bg-white p-8 rounded-3xl relative shadow-sm">
+        <div class="absolute -top-4 left-8 text-6xl text-orange-200"><i class="fas fa-quote-left"></i></div>
+        <p class="text-gray-600 mb-8 pt-4">“This programme has revolutionised how I connect with my students. Truly transformative.”</p>
+        <div class="flex items-center gap-4">
+          <img alt="Peter" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4yQFriT_H2TeDY2rimgcerLu8_p9GgG4osBM0jbf7ItuIK9hHTDNWVr8SmZVqgA1o05Dzwt7GXhLtkhWe4M49V0QJQsNix_fJ10s_6mePGbMebn0isuGmEIwjy467jUI1Onvuf2ONBuuUMA4oBXfHDFPn5D9NuMHy4-f8SMK49zZ26rcDjNx4pFwSAmKV6-R2PMCjD5nDnYdOGXPgb7ipAMO8116PBs3H_DADau1s3nliTDpwCtfGYmAu-2lLRu9tziidaFhRGzk6"/>
+          <div><h5 class="font-bold">Peter</h5><p class="text-xs text-orange-500">Teacher, North Legon</p></div>
+        </div>
+      </div>
+      <!-- Publisher (Gideon) -->
+      <div class="bg-white p-8 rounded-3xl relative shadow-sm">
+        <div class="absolute -top-4 left-8 text-6xl text-orange-200"><i class="fas fa-quote-left"></i></div>
+        <p class="text-gray-600 mb-8 pt-4">“Partnering with SuaNeAni has opened new avenues for our educational content.”</p>
+        <div class="flex items-center gap-4">
+          <img alt="Gideon" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4Qmoh65KP-oBxatiV5bHFfkNm88HTJSxUA7ShE-hBmWxmg5xdMM4voROGEFpcXk7eEdLnChaQ3peqy5wcRoKP_Ap2hqBcJ4uDs_Qc0fJr1RYLrnHvoAfdts3YNHMVmEBN3PARy14Kcn9tdUR4X8t_1n-v0gbdcGE2QaSHC40F1l7UjAPFjImt4JZW7xkCnL9HQLe3jqQo4b-NgbCGNGkYDye5xhjNYU_EtS_13ElmB_-nfbzohyNtdyBoAJthslNcZp2Gc69abA7p"/>
+          <div><h5 class="font-bold">Gideon</h5><p class="text-xs text-orange-500">Publisher</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GET INVOLVED (unchanged) -->
+<section class="py-16"><div class="container mx-auto px-4"><div class="bg-yellow-400 rounded-[40px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-12"><div class="flex items-center gap-6"><img alt="Bee Mascot" class="w-24 h-24" src="images/bee.png"/><div><h2 class="text-3xl font-bold text-slate-900">Together, let's shape the future of learning.</h2><p class="text-slate-800 opacity-80 mt-2">Be part of our mission to inspire minds and build a better world.</p></div></div><div class="flex flex-wrap gap-6 items-center"><div class="text-center group cursor-pointer"><div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-slate-900 transition-colors"><i class="fas fa-hand-holding-heart text-yellow-500 text-xl"></i></div><span class="text-xs font-bold uppercase">Volunteer</span></div><div class="text-center group cursor-pointer"><div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-slate-900 transition-colors"><i class="fas fa-handshake text-yellow-500 text-xl"></i></div><span class="text-xs font-bold uppercase">Partner</span></div><a class="bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-black transition-all" href="get-involved.html"><i class="fas fa-arrow-right mr-2"></i>Get Involved Today</a></div></div></div></section>
+
+<!-- NEWS (unchanged)
+<section class="py-20 bg-white"><div class="container mx-auto px-4"><div class="flex justify-between items-end mb-12"><div><span class="text-orange-500 font-bold uppercase tracking-widest text-sm"><i class="fas fa-newspaper mr-2"></i>Latest News</span><h2 class="text-4xl font-bold mt-2">Stay Informed. Stay Inspired.</h2></div><a class="border-2 border-orange-200 text-orange-500 px-6 py-2 rounded-full font-bold hover:bg-orange-500 hover:text-white transition-all" href="news.html">View All <i class="fas fa-arrow-right"></i></a></div><div class="grid md:grid-cols-4 gap-6"><div class="group cursor-pointer"><div class="overflow-hidden rounded-2xl mb-4"><img alt="News" class="group-hover:scale-110 transition-transform duration-500 w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL05-2BN-CzUI1vubItQnUIDMDSnF3kxGnqyT-bKvY4QMmGMckI9jYazWB2o4PgwgAqpY_yra6xcIUowVK71rDLoSbXnc4xrBGd177Yan7PuhhMuQShP9cLgz-tixxueTWR48G4kSPUBKV51JZLrxP154L9rPfJ0CWNa1r6c495DAjyxT6lTthgpKEzhu5Z3ykdb8WWiFzLqD4UGLdkJNizMtZqPebqppi5nm76urfW4QkeSd2Te_XXep-lubfzd_-ttpkMfBCk4to"/></div><div class="flex gap-2 mb-2"><span class="bg-orange-100 text-orange-600 text-[10px] px-2 py-0.5 rounded font-bold uppercase"><i class="fas fa-bullhorn mr-1"></i>News</span><span class="text-[10px] text-gray-400 font-bold uppercase">May 10, 2025</span></div><h4 class="font-bold group-hover:text-orange-500 transition-colors">Sua Ne Ani Launches New Digital Learning Program</h4></div><div class="group cursor-pointer"><div class="overflow-hidden rounded-2xl mb-4"><img alt="News" class="group-hover:scale-110 transition-transform duration-500 w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmOfsC2HuGixR6SDzkFhJI5cSUfDW_XnYUPELjGWaPsZWzCcJAUOYSer_9xgMnM72mWEhBOugIOKBmQr9TPtwFxnK_qawq9_pFa5YSCwm-RT136vcKcJxjr1a2xT12lBhEqkUnPWVJnHb3P8Uxr7En5zlqZ2dJ5-wP5Ryuee7AVA4LBCQ2pp7E3Mb69DphxkHXZY1qLTjGw2l09AxSBeVu33p3y80cpoMiCyocBy-jH0uXHfXsXHTjqZWLVYcoLvb3jKxPZ4UudLXh"/></div><div class="flex gap-2 mb-2"><span class="bg-green-100 text-green-600 text-[10px] px-2 py-0.5 rounded font-bold uppercase"><i class="fas fa-chalkboard-teacher mr-1"></i>Story</span><span class="text-[10px] text-gray-400 font-bold uppercase">May 3, 2025</span></div><h4 class="font-bold group-hover:text-orange-500 transition-colors">How Teacher Training is Transforming Classrooms</h4></div><div class="group cursor-pointer"><div class="overflow-hidden rounded-2xl mb-4"><img alt="News" class="group-hover:scale-110 transition-transform duration-500 w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqHeRIFbQ-pcfMveMu5xiugG9xI-erWYt_fSWbYTJYhW-WoPJq7JdU5yJLOECRk_yyu-YfESL-gifE0CxVGaYRkojEPWkmZw-A8G14war7-7dw07AWFTW2vEnwHC3hws4f1-SD3mYGaAzNwTt4tHJbMJeiIgO5NNbCbjEh3wqTsvkwS2bSBAVKIV3suJAL9chpI5BoCCvqrxoKqLlH6CUYFmAWfatjVgnjQETuoOM-QrhkEJI3ItbOvDIrIzAWEsRjCecKRj041A5X"/></div><div class="flex gap-2 mb-2"><span class="bg-blue-100 text-blue-600 text-[10px] px-2 py-0.5 rounded font-bold uppercase"><i class="fas fa-tree mr-1"></i>Event</span><span class="text-[10px] text-gray-400 font-bold uppercase">April 25, 2025</span></div><h4 class="font-bold group-hover:text-orange-500 transition-colors">Community Garden Project Brings Learning to Life</h4></div><div class="group cursor-pointer"><div class="overflow-hidden rounded-2xl mb-4"><img alt="News" class="group-hover:scale-110 transition-transform duration-500 w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Jf6f1DAnlRsqpRbP50CEMBOXyEGb8pEoFm7ASltQQ63JorHyyaJX1LBhS89_e2tjPbqCOKfJP1Jf8qhJ6L-bqUJaqMEoNB13XUtU_PC1wSL5t8ufbqp7gRH9TW3gELAt-x_REUuejTpTPD46Dm1GlvyMWs4bRpyZh5UYLNasIRUx6bRbf2h4Sr6lIM_PPs0d3CRfwaoGjnlfs1rEslSDv14TtKsLRZJEjgKIZR7wI2VhK9ba9itN1gRwWoF-xi39O1KMOSfePp20"/></div><div class="flex gap-2 mb-2"><span class="bg-purple-100 text-purple-600 text-[10px] px-2 py-0.5 rounded font-bold uppercase"><i class="fas fa-lightbulb mr-1"></i>Insight</span><span class="text-[10px] text-gray-400 font-bold uppercase">April 19, 2025</span></div><h4 class="font-bold group-hover:text-orange-500 transition-colors">The Importance of Vision in Education</h4></div></div></div></section> -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          // Fallback: try to initialize from the header's script
+          console.log('Header script not loaded, trying to initialize manually');
+          const scriptTag = document.createElement('script');
+          // The header's script will run when the HTML is inserted
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>

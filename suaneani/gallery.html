@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Gallery - Sua Ne Ani</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sua-yellow': '#f5a623',
+            'sua-dark-green': '#1b3b1f',
+            'sua-surface': '#fff8f6',
+            'sua-surface-low': '#fff1eb',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          borderRadius: {
+            'sua': '12px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #ffffff;
+      color: #1b3b1f;
+    }
+    .honeycomb-bg {
+      background-image: url('https://www.transparenttextures.com/patterns/honeycomb.png');
+      background-opacity: 0.05;
+    }
+    .gallery-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Active nav link styling - matches header */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32 bg-sua-surface">
+<!-- Decorative Bee Trace -->
+<div class="absolute top-1/4 right-1/4 opacity-20 pointer-events-none">
+<svg height="100" viewbox="0 0 200 100" width="200"><path d="M10 80 Q 50 10, 100 50 T 190 20" fill="none" stroke="#f5a623" stroke-dasharray="5,5" stroke-width="2"></path></svg>
+</div>
+<div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div data-purpose="hero-text">
+<p class="text-sua-yellow font-bold tracking-widest text-sm uppercase mb-4">Moments That Inspire</p>
+<h1 class="text-6xl md:text-7xl font-extrabold text-sua-dark-green mb-6 leading-tight">Our Gallery</h1>
+<p class="text-2xl font-bold text-sua-yellow mb-6">Real stories. Bright futures.</p>
+<p class="text-gray-600 text-lg leading-relaxed max-w-lg">
+          A collection of moments from our journey—celebrating curiosity, community, and the power of education to build a better tomorrow.
+        </p>
+</div>
+<div class="relative" data-purpose="hero-image">
+<!-- Masked Hero Image from Reference -->
+<div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-white transform rotate-2">
+<img alt="Children with Laptop" class="w-full h-[450px] object-cover" src="images/image06.jpg" style="object-position: top center;"/>
+</div>
+<!-- Decorative Badge -->
+<div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-sua shadow-lg border border-sua-yellow/20 max-w-[200px]">
+<p class="text-xs font-bold text-sua-dark-green italic">"Empowering the next generation of leaders in Ghana."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+
+<!-- BEGIN: FilterSection -->
+<section class="py-12 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-wrap justify-center gap-3 md:gap-4" data-purpose="gallery-filters">
+<button class="px-8 py-3 bg-sua-dark-green text-white rounded-full font-semibold shadow-md transition-all">All</button>
+<!-- Filter Button Template -->
+<button class="px-6 py-3 border border-gray-200 hover:border-sua-yellow hover:bg-sua-surface flex items-center gap-2 rounded-full font-medium text-gray-600 transition-all">
+<svg class="w-5 h-5 text-sua-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Learning in Action
+        </button>
+<button class="px-6 py-3 border border-gray-200 hover:border-sua-yellow hover:bg-sua-surface flex items-center gap-2 rounded-full font-medium text-gray-600 transition-all">
+<svg class="w-5 h-5 text-sua-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Community
+        </button>
+<button class="px-6 py-3 border border-gray-200 hover:border-sua-yellow hover:bg-sua-surface flex items-center gap-2 rounded-full font-medium text-gray-600 transition-all">
+<svg class="w-5 h-5 text-sua-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Environment
+        </button>
+<button class="px-6 py-3 border border-gray-200 hover:border-sua-yellow hover:bg-sua-surface flex items-center gap-2 rounded-full font-medium text-gray-600 transition-all">
+<svg class="w-5 h-5 text-sua-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Events
+        </button>
+<button class="px-6 py-3 border border-gray-200 hover:border-sua-yellow hover:bg-sua-surface flex items-center gap-2 rounded-full font-medium text-gray-600 transition-all">
+<svg class="w-5 h-5 text-sua-yellow" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.175 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.381-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Special Moments
+        </button>
+</div>
+</div>
+</section>
+<!-- END: FilterSection -->
+
+<!-- BEGIN: GalleryGrid -->
+<section class="py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="gallery-grid">
+<!-- Gallery Card 1 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Digital Learning" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVe6zelubN8AyQq_Pvcfno_-k0T8hPbEZ1KCKbUP9FU0jLQb9UZR-100NXyhhbkUC3w9CNflofzGS34yyM3jOawYFNtg_UdF98TrwMsljxL2SBn85BRlQttjIjK6acWrvklbNmutPgt4rjsRXePsn_67d2eOCyj-FDtFXX9aDRHUeYze7-lEaGgocqi9VGmwyflXUlPxrgoelDbPYURfavB0e49QgCtFWkY7MJVqw3KBrdV0SQf8MA"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Digital Learning in Action</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 2 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Planting for a Better Tomorrow" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACdw4C74F9G7DxDW2x6zU5RQRMuyTVt2Wyp2ciI6ggIPNLq_KNAN3S-fFeMdrHxQY0PcU3VuYQHfZ6hNVnJGYLl9E9tU5q5QWFnItIzYxxwHZrUNY6no4i8s0rNgOdssiq4EQyWgvxD1Dk3UXw0J805iGENDYQr99wwOsDWnjSI-ndmYYnMLCnshYyqtxkF_jPhYmZYLpx6FmkcomsQeqhGUHC4bwYx-5hbTPBsfkWLfqdkhhnDno4"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Planting for a Better Tomorrow</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 3 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="STEM Workshop" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxe5Sy9bZIi4kCCPnjbPHMAajE7FrX3DI4hDnNYPeFeb-BGBzOGNDLv55mvmYhg1XpsVvNzFWzM_ViK1YvwqLrwDhC1W1sXMRS3AvH1UJUdR7q3b0wVr3BzyrLEMa79iDZQ5xAjJk4zCtgLCWAptzsu6sSaNiR2VugUR2kNxeLjwCOq-grUAg675wH-aHTvERl3uUSdfHjpeMgtpiSfZb_UJGDv1pL9GeovenrO8BzYnhIgOVm_VvT"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">STEM Workshop</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 4 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Stronger Communities" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKR46_1ePKmeTBdcG50LFY8TQvlDvuBx2dqK4IuJmKSrmZza9C58moghTDxxKIyaaRUTq3Pz-SP_EY0-A8TXAIe2oDrAAnLxiRaiGBw9EHVam2sEylEOt-5HPZbHRY8fLNTEMduKgiNcw4fSqv9XGgoYDSDxujYIa9y8jXnW4Mwr2OtI1FxzaZ7NsU11oKQ_TTRj2av7SN2ZSunbHEYVXes4UVT_MnkwDp_xLYs-fjWyCx5XZg7nTN"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Stronger Communities</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 5 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Young Minds, Big Ideas" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4HTCSOmqhJovC4NxAMRjjFx4inx-SLui0J6p6WbfS-BBHMJIbHhwP6uBCOkTPn-LKhG1ZPbdKMAb6tRQoUsa0ihFSpzgt7_0vub4BOfwesF2FAClYjhgxfM8vqfQWFQ_BiHUVTNj4ArH3C1yKIXDfYCtgiAcrpZ9P-4ektLgePWqnQDvLi6GTbKfzItcV5iS9geumKrHC8BBgwOCTC9XbYCRJuIa3NUJ2Yd3kiLOjtpmi4VoNmZLt"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Young Minds, Big Ideas</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 6 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Learning Together" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP6XCgUiamj0J-x0yms12FIGMivjYB7BJrG5ohUtnX-DnwmBbWmsSMdApKj7vNQVRHVl9BcU0f3HKE2Iijg8lwPWD56XnsUz98s3tjLrPwxyKa3lcxaW9eTQm15AYp05t8a_3snLsG_LBKTP_cSAKRfYW98qYMLQ-6TPxYnr8UNVQeON0IdhXm02JDh4NNmbA_isYJ-kA3RTjLiekrw9fYWwkzY0Vj2w73Y4zal2VUbasWBsIgI2u6"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Learning Together</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 7 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Inspired by Nature" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz89C8AK_wIaAxfbjV90pndsqODjE_CCNghN-iUplwFkBKTumYSsgh6IMc5H8nZegZdM632Y8T5u5N4TdKnTYwNVmHRczfEOLdHG7m2-xVf1EHTOCo69omSYHOJLLbl3aFj4IPTubpnI00QCDaYy9Fku_VXDyskSQ7dsqBtfuniaAKuf5uFBjhYH8LARuV4QFvaWaPnW9li-nRQChVdC1mjJtDCGpKhHGBvl7Bxkt-mcHhrhynS13S"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Inspired by Nature</h3>
+</div>
+</div>
+</div>
+<!-- Gallery Card 8 -->
+<div class="gallery-card group" data-purpose="gallery-item">
+<div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+<div class="overflow-hidden h-56">
+<img alt="Building Brighter Futures" class="w-full h-full object-cover transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbTyLBi9G-bCtI77kn5LD-WiTj_I6YW2_no1RdSXaM1jfw_JccWF6YKJNJ73kHtwXmljn9ZezkGuyFqyjJRYkPBaocS1X8s_fRxo1V6SjaZqryzsUMVyaqB5w30i92iX8mP70_xzkHiT_KzGQpRI2tTMuDE8GO6tpRuUtW-RS2m3fvcao7nkyeY0Zc2a9zeYaFHk4SeK4VQtUVONKMk9hayNJjLLRNlCunK3Lb6OwvuStRU5dmVAnx"/>
+</div>
+<div class="p-5 text-center">
+<h3 class="font-bold text-sua-dark-green">Building Brighter Futures</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Banners -->
+<div class="mt-12 grid md:grid-cols-2 gap-8">
+<div class="relative h-64 rounded-sua overflow-hidden flex items-end p-8 text-white group cursor-pointer" data-purpose="featured-banner">
+<img class="absolute inset-0 w-full h-full object-cover brightness-50 group-hover:scale-105 transition-transform duration-700" src="images/image12.jpg"/>
+<div class="relative z-10 flex items-center justify-between w-full">
+<h2 class="text-3xl font-bold">Today's Learners, Tomorrow's Leaders</h2>
+<span class="text-3xl">♡</span>
+</div>
+</div>
+<div class="relative h-64 rounded-sua overflow-hidden p-8 bg-sua-surface-low border border-sua-yellow/20 flex items-center justify-between" data-purpose="impact-banner">
+<div class="flex-1">
+<h2 class="text-3xl font-extrabold text-sua-dark-green leading-tight">More Moments.<br/><span class="text-sua-yellow">Stronger Impact.</span><br/>Brighter Tomorrow.</h2>
+</div>
+<div class="flex-shrink-0">
+<!-- Placeholder for Bee Character Mascot -->
+<div class="w-32 h-32 bg-sua-yellow rounded-full flex items-center justify-center text-5xl"><img src="images/bee.png" alt="Bee"></div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-16 flex flex-col items-center gap-4">
+<p class="text-gray-500 text-sm font-medium">Showing 1 – 8 of 24</p>
+<button class="px-10 py-4 border-2 border-sua-dark-green text-sua-dark-green font-bold rounded-full hover:bg-sua-dark-green hover:text-white transition-all flex items-center gap-2">
+          Load More 
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</section>
+<!-- END: GalleryGrid -->
+
+<!-- BEGIN: CTABanner -->
+<section class="py-16">
+<div class="container mx-auto px-6">
+<div class="bg-sua-yellow rounded-[40px] p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<!-- Background Honeycomb pattern simulated -->
+<div class="absolute inset-0 opacity-10 pointer-events-none honeycomb-bg"></div>
+<div class="flex items-center gap-8 relative z-10">
+<div class="bg-white p-4 rounded-full shadow-lg">
+<span class="text-6xl"><img src="images/bee.png" alt="Bee" width="60px"></span> <!-- Bee character placeholder -->
+</div>
+<div>
+<h2 class="text-4xl font-extrabold text-sua-dark-green mb-2">Be Part of the Story</h2>
+<p class="text-sua-dark-green/80 font-medium max-w-md">Every moment we capture is a step toward a brighter, more connected future.</p>
+</div>
+</div>
+<div class="relative z-10">
+<button class="bg-sua-dark-green text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:translate-x-1 transition-all flex items-center gap-2">
+            <a href="get-involved.html">Get Involved Today</a>
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CTABanner -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          // Fallback: try to initialize from the header's script
+          console.log('Header script not loaded, trying to initialize manually');
+          const scriptTag = document.createElement('script');
+          // The header's script will run when the HTML is inserted
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donate - Sua Ne Ani</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#f5a623',
+              darkYellow: '#e09612',
+              green: '#2d5a27',
+              lightGreen: '#f0f4ef',
+              surface: '#fff8f6',
+              surfaceLow: '#fff1eb',
+            },
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fffdfa;
+    }
+    .honeycomb-pattern {
+      background-image: radial-gradient(#f5a623 0.5px, transparent 0.5px);
+      background-size: 20px 20px;
+      opacity: 0.1;
+    }
+    .circle-clip {
+      clip-path: circle(50% at 50% 50%);
+    }
+    .payment-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+    .currency-selector {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+      background-position: right 0.5rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em 1.5em;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    /* Active nav link styling - matches header */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="text-slate-800">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden pt-12 pb-20 bg-brand-surface">
+<!-- Decorative Bee Trace -->
+<div class="absolute top-1/2 left-10 opacity-20 pointer-events-none">
+<img alt="Bee Icon" class="w-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1B8DlUEJBI3gN00unoYMbE_x5_WK489Yl836kPrkIORYdk_Ot48nAMDjBTZEGyun2Ki8tn61quHsAzePkfQfCfRjoLjE_2wcl8esopiRapHnbKNcqCVVeUvdMFKzBp_YXjeUYohf28eFyXN70OrXbAXKNsq8OVA7V4qiVGuKVC8myt-0C0zYwQ5PNkTT6qkSk2D_gVVKauXuSaRj1oIIe69mhgA2NHfHvEDLU427vQhl6zxkBx8Tc"/>
+</div>
+<div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+<!-- Text Content -->
+<div class="lg:w-1/2 z-10">
+<span class="text-brand-green font-bold text-sm tracking-widest uppercase mb-4 block">BE PART OF THE CHANGE</span>
+<h1 class="text-6xl font-extrabold leading-tight text-slate-900 mb-2">
+          Your Support. <br/>
+<span class="text-brand-green">Their Future.</span>
+</h1>
+<p class="text-lg text-slate-600 mb-8 max-w-lg">
+          Every donation you make helps us provide quality education, empower young minds, and build stronger, more sustainable communities worldwide.
+        </p>
+<div class="flex items-start gap-3 bg-white/50 p-4 rounded-xl border border-brand-yellow/20">
+<span class="text-brand-yellow text-xl">🌍</span>
+<p class="text-sm font-medium italic text-slate-700">
+            Together, we can open minds, inspire hearts and shape a brighter tomorrow across the globe.
+          </p>
+</div>
+</div>
+<!-- Hero Image Circle -->
+<div class="lg:w-1/2 relative">
+<div class="w-full aspect-square max-w-lg mx-auto relative">
+<img alt="Smiling Children" class="w-full h-full object-cover rounded-full border-8 border-white shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeb5--Rks0U0_yR4SzdrDqotE2kuauQVS7gxcza5Kd4vJtEhVVQWcZ6GNCoL53XCHvulHlrk-SL1_kkPZiJ3hUU3dsKHReJEs3gp48Hb-UsSEJGw4FoiUoWLgrnQsXmupk7oE8bTS_BWVTOxsztJfIz1-EonLDIQG0NGDo9tBuGrcBaIabC1_xOKFKD5YSGiUwZ8iAyvArfqj7NnlrSpVdsP6T0tjKK9hrzd1d30OXpqFbxKhjz0B2Bad4KvFCmK12BQ"/>
+<!-- Floating Badge -->
+<div class="absolute -bottom-4 -right-4 bg-white p-6 rounded-full shadow-xl text-center w-40 h-40 flex flex-col items-center justify-center border-2 border-brand-yellow/30">
+<img alt="Icon" class="mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz3MeFNiTIrpV7kPe7ZhnuLPlo052KuQlzNy3OPqkucrMwE_sMxTMuprg3GOY-HwN2e1QGJbngTog0oSYl35Fin57pkS2uRozoxMerul0rjhPVp9fPHNZ3-JPwl0a9Qi9ZwiaoU704ghKvo001ikathtrVe_2u9IxijgWxO8Mzt2RUpQSCuxt3mPFKC-Us2r8XAjhS3UTnIrx44cykNg_1YyHJ7lS8gC-LASxgQkfIjYV6fzOH3Epl"/>
+<p class="text-xs font-bold leading-tight">Small acts.<br/>Big change.<br/>Worldwide impact.</p>
+<span class="text-brand-yellow mt-1">♡</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+
+<!-- BEGIN: DonationForm -->
+<section class="py-16">
+<div class="container mx-auto px-4">
+<div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8">
+<!-- Main Donation Form -->
+<div class="lg:col-span-7">
+<div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+<!-- Form Header -->
+<div class="bg-brand-green px-8 py-6">
+<h2 class="text-2xl font-bold text-white">Make a Donation</h2>
+<p class="text-white/80 text-sm">Your generous support makes our work possible</p>
+</div>
+
+<!-- Form Body -->
+<div class="p-8">
+<form class="space-y-8">
+<!-- Step 1: Amount -->
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-3">Select Amount</label>
+<div class="grid grid-cols-3 md:grid-cols-5 gap-3 mb-4">
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all focus:border-brand-yellow focus:bg-brand-yellow/5">$10</button>
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all focus:border-brand-yellow focus:bg-brand-yellow/5">$25</button>
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-brand-yellow bg-brand-yellow/10 text-brand-yellow font-bold text-sm transition-all">$50</button>
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all focus:border-brand-yellow focus:bg-brand-yellow/5">$100</button>
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all focus:border-brand-yellow focus:bg-brand-yellow/5">$250</button>
+</div>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
+<input type="number" placeholder="Enter custom amount" class="w-full pl-8 pr-4 py-4 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow font-semibold text-lg" min="1"/>
+</div>
+</div>
+
+<!-- Step 2: Currency & Frequency -->
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-3">Currency</label>
+<select class="w-full px-4 py-4 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow currency-selector font-medium">
+<option value="USD">🇺🇸 USD - US Dollar</option>
+<option value="EUR">🇪🇺 EUR - Euro</option>
+<option value="GBP">🇬🇧 GBP - British Pound</option>
+<option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+<option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+<option value="GHS">🇬🇭 GHS - Ghana Cedi</option>
+<option value="NGN">🇳🇬 NGN - Nigerian Naira</option>
+<option value="KES">🇰🇪 KES - Kenyan Shilling</option>
+<option value="ZAR">🇿🇦 ZAR - South African Rand</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-700 mb-3">Frequency</label>
+<div class="grid grid-cols-2 gap-3">
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-brand-yellow bg-brand-yellow/10 text-brand-yellow font-bold text-sm transition-all">One-Time</button>
+<button type="button" class="py-3 px-4 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all">Monthly</button>
+</div>
+</div>
+</div>
+
+<!-- Step 3: Personal Information -->
+<div class="border-t border-slate-100 pt-8">
+<h3 class="text-lg font-bold text-slate-800 mb-4">Your Information</h3>
+<div class="grid md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-slate-600 mb-2">First Name *</label>
+<input type="text" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow" required/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-600 mb-2">Last Name *</label>
+<input type="text" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow" required/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-600 mb-2">Email Address *</label>
+<input type="email" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow" required/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-slate-600 mb-2">Country *</label>
+<select class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow currency-selector" required>
+<option value="">Select your country</option>
+<option value="GH">🇬🇭 Ghana</option>
+<option value="US">🇺🇸 United States</option>
+<option value="UK">🇬🇧 United Kingdom</option>
+<option value="CA">🇨🇦 Canada</option>
+<option value="AU">🇦🇺 Australia</option>
+<option value="NG">🇳🇬 Nigeria</option>
+<option value="KE">🇰🇪 Kenya</option>
+<option value="ZA">🇿🇦 South Africa</option>
+<option value="DE">🇩🇪 Germany</option>
+<option value="FR">🇫🇷 France</option>
+<option value="NL">🇳🇱 Netherlands</option>
+<option value="SE">🇸🇪 Sweden</option>
+<option value="NO">🇳🇴 Norway</option>
+<option value="DK">🇩🇰 Denmark</option>
+<option value="FI">🇫🇮 Finland</option>
+<option value="ES">🇪🇸 Spain</option>
+<option value="IT">🇮🇹 Italy</option>
+<option value="PT">🇵🇹 Portugal</option>
+<option value="BR">🇧🇷 Brazil</option>
+<option value="IN">🇮🇳 India</option>
+<option value="CN">🇨🇳 China</option>
+<option value="JP">🇯🇵 Japan</option>
+<option value="AE">🇦🇪 UAE</option>
+<option value="SA">🇸🇦 Saudi Arabia</option>
+<option value="SG">🇸🇬 Singapore</option>
+<option value="MY">🇲🇾 Malaysia</option>
+<option value="NZ">🇳🇿 New Zealand</option>
+</select>
+</div>
+</div>
+</div>
+
+<!-- Step 4: Payment Method -->
+<div class="border-t border-slate-100 pt-8">
+<h3 class="text-lg font-bold text-slate-800 mb-4">Payment Method</h3>
+
+<!-- Payment Tabs -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+<button type="button" class="payment-card py-4 px-3 rounded-xl border-2 border-brand-yellow bg-brand-yellow/5 text-brand-yellow font-bold text-sm transition-all flex items-center justify-center gap-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              Card
+            </button>
+<button type="button" class="payment-card py-4 px-3 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all flex items-center justify-center gap-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Bank Transfer
+            </button>
+<button type="button" class="payment-card py-4 px-3 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all flex items-center justify-center gap-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Mobile Money
+            </button>
+<button type="button" class="payment-card py-4 px-3 rounded-xl border-2 border-slate-200 hover:border-brand-yellow hover:bg-brand-yellow/5 font-bold text-sm transition-all flex items-center justify-center gap-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              Cryptocurrency
+            </button>
+</div>
+
+<!-- Card Payment Fields -->
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-slate-600 mb-2">Card Number</label>
+<div class="relative">
+<input type="text" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow font-mono"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-1">
+<span class="text-xs font-bold text-slate-400">VISA</span>
+<span class="text-xs font-bold text-slate-400">MC</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-slate-600 mb-2">Expiry Date</label>
+<input type="text" placeholder="MM/YY" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-600 mb-2">CVC</label>
+<input type="text" placeholder="123" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-600 mb-2">Cardholder Name</label>
+<input type="text" placeholder="John Doe" class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-brand-yellow focus:ring-brand-yellow"/>
+</div>
+</div>
+
+<!-- Bank Transfer Information (Hidden by default) -->
+<div class="hidden space-y-4" id="bank-transfer">
+<div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+<h4 class="font-bold text-slate-800 mb-3">International Bank Transfer</h4>
+<div class="space-y-2 text-sm">
+<p><span class="font-semibold">Bank:</span> Standard Chartered Bank</p>
+<p><span class="font-semibold">Account Name:</span> Sua Ne Ani Foundation</p>
+<p><span class="font-semibold">Account Number:</span> 0123456789</p>
+<p><span class="font-semibold">Sort Code:</span> 01-02-03</p>
+<p><span class="font-semibold">IBAN:</span> GB75SCBL12345678901234</p>
+<p><span class="font-semibold">SWIFT/BIC:</span> SCBLGB2L</p>
+<p><span class="font-semibold">Reference:</span> Donation - [Your Name]</p>
+</div>
+<div class="mt-4 p-3 bg-brand-yellow/10 rounded-lg border border-brand-yellow/20">
+<p class="text-xs text-slate-600">⚠️ Please use your full name as the reference so we can acknowledge your donation.</p>
+</div>
+</div>
+</div>
+
+<!-- Mobile Money (Hidden by default) -->
+<div class="hidden space-y-4" id="mobile-money">
+<div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+<h4 class="font-bold text-slate-800 mb-3">Mobile Money (Ghana)</h4>
+<div class="space-y-2 text-sm">
+<p><span class="font-semibold">Network:</span> MTN Mobile Money</p>
+<p><span class="font-semibold">Number:</span> 055 123 4567</p>
+<p><span class="font-semibold">Name:</span> Sua Ne Ani Foundation</p>
+<p><span class="font-semibold">Reference:</span> Donation - [Your Name]</p>
+</div>
+<div class="mt-4 p-3 bg-brand-yellow/10 rounded-lg border border-brand-yellow/20">
+<p class="text-xs text-slate-600">📱 Available for MTN, Vodafone, and AirtelTigo customers in Ghana.</p>
+</div>
+</div>
+</div>
+
+<!-- Cryptocurrency (Hidden by default) -->
+<div class="hidden space-y-4" id="crypto">
+<div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+<h4 class="font-bold text-slate-800 mb-3">Cryptocurrency Donations</h4>
+<div class="space-y-4">
+<div>
+<p class="text-sm font-semibold text-slate-600 mb-2">Bitcoin (BTC)</p>
+<div class="flex items-center gap-2">
+<input type="text" value="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" readonly class="flex-1 px-4 py-2 bg-white border border-slate-200 rounded-lg text-xs font-mono"/>
+<button class="px-3 py-2 bg-brand-yellow text-white rounded-lg text-xs font-bold hover:bg-brand-darkYellow transition">Copy</button>
+</div>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-600 mb-2">Ethereum (ETH)</p>
+<div class="flex items-center gap-2">
+<input type="text" value="0x742d35Cc6634C0532925a3b844Bc454e4438f44e" readonly class="flex-1 px-4 py-2 bg-white border border-slate-200 rounded-lg text-xs font-mono"/>
+<button class="px-3 py-2 bg-brand-yellow text-white rounded-lg text-xs font-bold hover:bg-brand-darkYellow transition">Copy</button>
+</div>
+</div>
+<p class="text-xs text-slate-500">⚠️ Please ensure you send the correct cryptocurrency to the corresponding address.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Submit Button -->
+<button type="submit" class="w-full bg-brand-green hover:bg-green-800 text-white py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition shadow-lg hover:shadow-xl">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Donate Securely
+          </button>
+
+<p class="text-center text-xs text-slate-500 mt-6">
+            🔒 Your donation is secure and encrypted. We never store your payment information.
+            <br/>For assistance, contact us at <a href="mailto:donate@suaneani.org" class="text-brand-green font-bold hover:underline">donate@suaneani.org</a>
+</p>
+</form>
+</div>
+</div>
+</div>
+
+<!-- Sidebar -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Impact Card -->
+<div class="bg-gradient-to-br from-brand-green to-green-700 rounded-3xl p-8 text-white">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-4xl">🌍</span>
+<h3 class="text-xl font-bold">Your Global Impact</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-white/20 pb-3">
+<span class="text-white/80">Communities Reached</span>
+<span class="font-bold text-xl">20+</span>
+</div>
+<div class="flex justify-between items-center border-b border-white/20 pb-3">
+<span class="text-white/80">Learners Empowered</span>
+<span class="font-bold text-xl">5,000+</span>
+</div>
+<div class="flex justify-between items-center border-b border-white/20 pb-3">
+<span class="text-white/80">Teachers Trained</span>
+<span class="font-bold text-xl">300+</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/80">Active Projects</span>
+<span class="font-bold text-xl">10+</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-white/10 rounded-xl">
+<p class="text-sm italic">"Every dollar you give creates ripples of change across communities."</p>
+</div>
+</div>
+
+<!-- Why Donate Card -->
+<div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-4">Why Donate to Sua Ne Ani?</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="text-brand-yellow mt-1">✦</span>
+<span class="text-sm text-slate-600"><span class="font-bold">Transparent Impact:</span> We share regular updates on how your donations are used.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-brand-yellow mt-1">✦</span>
+<span class="text-sm text-slate-600"><span class="font-bold">Tax-Deductible:</span> Donations are eligible for tax benefits in multiple countries.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-brand-yellow mt-1">✦</span>
+<span class="text-sm text-slate-600"><span class="font-bold">Community-Led:</span> We work directly with communities to ensure lasting change.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-brand-yellow mt-1">✦</span>
+<span class="text-sm text-slate-600"><span class="font-bold">Sustainable:</span> Your support helps build systems that continue to give back.</span>
+</li>
+</ul>
+</div>
+
+<!-- Trust Badges -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm">
+<h4 class="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4 text-center">Secured By</h4>
+<div class="flex items-center justify-center gap-6 grayscale opacity-70">
+<img alt="Stripe" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYwnvspNjMUGKjXg9VP6YziD-IIsaJk447a3liNJhyj9qGY40mNsfxl68Fzsp9HmOBm14o_C_xtAwukHqtfbZrw83f6SA6T8roci3ELvRk1I4VS3ngeXUetVh0hM0IRGWct8CTw3oLI9Cpp0RZVMijSKTyODiis_Q6ii3Y2uqQU90AT2xh-1PKCWxqTwdKninDJzE-I6Kr-vHxtX2KhPKeANSlH8vDv0yfD9Rz7SwQfZ-UHe8Wk1fW"/>
+<img alt="PayPal" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXIfho7-IdchumUaADuMzVKge6z5sH5XXNT4XkgEEJ1pGLWaHndhnwoSrwuOR5nYQZXwF9KEbSJcUQXG3H3_K6M_gEV-6Pv4_qN1S35WJsYnrKd528gmkjLhD_pxN-XrcBcnjfQM0C16bITWx5031g_S_-U0W96ClJlt_m0fhiDYWqDH8G0otHDNo9c2jaywTe8k7OugLvzkFCmdaH2mQxOPS5nozpJoFIALWlD9KHSilckAZQ3XBi"/>
+<img alt="SSL Secure" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOvFbYOVg7eWUaoiL9Aw9sVnPUCW3RrFpO0FeUYvT1fMtjvQZNOk7p5vY-ZcRQ1-p-AE5M_uxCGCKzK2-7f3F9I-3G6nI1wNX7Vg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DonationForm -->
+
+<!-- BEGIN: Other Ways to Give -->
+<section class="py-16 bg-brand-surface">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-extrabold text-center mb-12">Other Ways to <span class="text-brand-green">Give</span></h2>
+<div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<!-- Option 1 -->
+<div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 text-center hover:shadow-xl transition-all">
+<div class="w-16 h-16 bg-brand-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📱</div>
+<h3 class="text-xl font-bold mb-2">Mobile Money</h3>
+<p class="text-sm text-slate-600 mb-4">Send via MTN, Vodafone, or AirtelTigo in Ghana</p>
+<p class="text-xs text-slate-500 font-mono bg-slate-50 p-2 rounded-lg">055 123 4567</p>
+</div>
+<!-- Option 2 -->
+<div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 text-center hover:shadow-xl transition-all">
+<div class="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🏦</div>
+<h3 class="text-xl font-bold mb-2">Bank Transfer</h3>
+<p class="text-sm text-slate-600 mb-4">International and local bank transfers accepted</p>
+<button class="text-brand-green font-bold text-sm hover:underline">View Details →</button>
+</div>
+<!-- Option 3 -->
+<div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 text-center hover:shadow-xl transition-all">
+<div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🔄</div>
+<h3 class="text-xl font-bold mb-2">Cryptocurrency</h3>
+<p class="text-sm text-slate-600 mb-4">Bitcoin, Ethereum, and more accepted</p>
+<button class="text-brand-green font-bold text-sm hover:underline">View Addresses →</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Other Ways to Give -->
+
+<!-- BEGIN: FAQSection -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-extrabold mb-12 text-center">Frequently Asked <span class="text-brand-green">Questions</span></h2>
+<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+<!-- FAQ 1 -->
+<div class="border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-all">
+<h4 class="font-bold text-slate-800 mb-2">Is my donation tax-deductible?</h4>
+<p class="text-sm text-slate-600">Yes! Sua Ne Ani is registered in multiple countries. We provide receipts for tax purposes in the US, UK, Ghana, and other jurisdictions.</p>
+</div>
+<!-- FAQ 2 -->
+<div class="border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-all">
+<h4 class="font-bold text-slate-800 mb-2">How is my donation used?</h4>
+<p class="text-sm text-slate-600">Your donation directly supports our education programs, teacher training, community projects, and operational costs. We maintain 100% transparency.</p>
+</div>
+<!-- FAQ 3 -->
+<div class="border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-all">
+<h4 class="font-bold text-slate-800 mb-2">Can I donate in my local currency?</h4>
+<p class="text-sm text-slate-600">Yes! We accept donations in multiple currencies including USD, EUR, GBP, GHS, NGN, and more. Our system automatically converts.</p>
+</div>
+<!-- FAQ 4 -->
+<div class="border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-all">
+<h4 class="font-bold text-slate-800 mb-2">Can I sponsor a child's education?</h4>
+<p class="text-sm text-slate-600">Absolutely! We have a child sponsorship program. Contact us at <a href="mailto:sponsor@suaneani.org" class="text-brand-green font-bold hover:underline">sponsor@suaneani.org</a> for details.</p>
+</div>
+<!-- FAQ 5 -->
+<div class="border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-all">
+<h4 class="font-bold text-slate-800 mb-2">What payment methods do you accept?</h4>
+<p class="text-sm text-slate-600">We accept credit/debit cards (Visa, Mastercard, Amex), bank transfers, mobile money, and cryptocurrency.</p>
+</div>
+<!-- FAQ 6 -->
+<div class="border border-slate-100 rounded-2xl p-6 hover:shadow-md transition-all">
+<h4 class="font-bold text-slate-800 mb-2">Will I receive a receipt?</h4>
+<p class="text-sm text-slate-600">Yes! You will receive an email receipt immediately after your donation. For tax purposes, we can provide formal receipts upon request.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+
+<!-- BEGIN: CTA Banner -->
+<section class="py-16">
+<div class="container mx-auto px-4">
+<div class="bg-gradient-to-r from-brand-yellow to-brand-darkYellow rounded-[40px] p-12 relative overflow-hidden">
+<div class="absolute inset-0 honeycomb-pattern opacity-20"></div>
+<div class="relative z-10 text-center">
+<h2 class="text-4xl font-extrabold text-white mb-4">Ready to Make a Difference?</h2>
+<p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Every contribution, big or small, helps us create lasting change in communities across the globe.</p>
+<a href="#" class="inline-block bg-slate-900 hover:bg-black text-white px-10 py-4 rounded-full font-bold text-lg transition shadow-2xl">
+            Start Donating Now ♡
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CTA Banner -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          // Fallback: try to initialize from the header's script
+          console.log('Header script not loaded, trying to initialize manually');
+          const scriptTag = document.createElement('script');
+          // The header's script will run when the HTML is inserted
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+
+  // Payment method switching
+  document.addEventListener('DOMContentLoaded', function() {
+    const paymentButtons = document.querySelectorAll('.payment-card');
+    const bankTransfer = document.getElementById('bank-transfer');
+    const mobileMoney = document.getElementById('mobile-money');
+    const crypto = document.getElementById('crypto');
+    const cardFields = document.querySelector('.payment-card:first-child').closest('.grid').nextElementSibling;
+
+    paymentButtons.forEach((btn, index) => {
+      btn.addEventListener('click', function() {
+        // Reset all buttons
+        paymentButtons.forEach(b => {
+          b.classList.remove('border-brand-yellow', 'bg-brand-yellow/5', 'text-brand-yellow');
+          b.classList.add('border-slate-200');
+        });
+        
+        // Activate clicked button
+        this.classList.add('border-brand-yellow', 'bg-brand-yellow/5', 'text-brand-yellow');
+        this.classList.remove('border-slate-200');
+
+        // Show/hide payment methods
+        if (index === 0) { // Card
+          bankTransfer.classList.add('hidden');
+          mobileMoney.classList.add('hidden');
+          crypto.classList.add('hidden');
+          cardFields.style.display = 'block';
+        } else if (index === 1) { // Bank Transfer
+          bankTransfer.classList.remove('hidden');
+          mobileMoney.classList.add('hidden');
+          crypto.classList.add('hidden');
+          cardFields.style.display = 'none';
+        } else if (index === 2) { // Mobile Money
+          bankTransfer.classList.add('hidden');
+          mobileMoney.classList.remove('hidden');
+          crypto.classList.add('hidden');
+          cardFields.style.display = 'none';
+        } else if (index === 3) { // Crypto
+          bankTransfer.classList.add('hidden');
+          mobileMoney.classList.add('hidden');
+          crypto.classList.remove('hidden');
+          cardFields.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News &amp; Stories - Sua Ne Ani</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FDBA13',
+              darkYellow: '#E5A600',
+              green: '#1A4314',
+              lightGreen: '#F0F9EF',
+              dark: '#111827',
+              gray: '#6B7280'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #FFFFFF;
+    }
+    .honeycomb-pattern {
+      background-image: radial-gradient(#FDBA13 0.5px, transparent 0.5px);
+      background-size: 20px 20px;
+      opacity: 0.1;
+    }
+    /* Custom scrollbar for category scroll */
+    .category-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+    .category-scroll::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    .category-scroll::-webkit-scrollbar-thumb {
+      background: #FDBA13;
+      border-radius: 10px;
+    }
+    .category-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #FDBA13 #f1f1f1;
+    }
+
+    /* Active nav link styling - matches header */
+    .nav-link-active {
+      color: #F5A623 !important;
+      border-bottom: 2px solid #F5A623;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive {
+      color: #4B5563 !important;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+    }
+    .nav-link-inactive:hover {
+      color: #F5A623 !important;
+    }
+    
+    .mobile-link-active {
+      color: #F5A623 !important;
+      font-weight: 600 !important;
+      background-color: #fef3c7 !important;
+    }
+    .mobile-link-inactive {
+      color: #1e293b !important;
+      font-weight: 500 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-brand-dark">
+
+<!-- ===== HEADER COMPONENT ===== -->
+<div id="header-component"></div>
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<!-- BEGIN: HeroSection -->
+<section class="bg-lightGreen/30 py-12 lg:py-20 overflow-hidden">
+<div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<p class="text-brand-green font-bold uppercase tracking-wider text-sm mb-4">News &amp; Stories</p>
+<h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+            Stories of Impact.<br/>News that <span class="text-brand-green">Inspires.</span>
+</h1>
+<p class="text-lg text-brand-gray mb-8 max-w-md">
+            Stay updated with the latest news, stories, and announcements from Sua Ne Ani and the communities we serve.
+          </p>
+<!-- Search on mobile -->
+<div class="relative w-full max-w-md md:hidden">
+<input class="w-full pl-4 pr-10 py-3 border border-gray-200 rounded-full focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Search news..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2">
+<svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="absolute -bottom-10 left-10 opacity-80 hidden md:block">
+<img alt="Bee Illustration" class="w-16" src="images/bee.png"/>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
+<img alt="Children reading newspaper" class="w-full h-auto object-cover" src="images/image12.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+
+<!-- BEGIN: FilterBar - Responsive Horizontal Scroll -->
+<section class="bg-white py-4 border-b">
+<div class="container mx-auto px-4">
+<div class="flex items-center gap-3">
+<!-- Category Filter - Scrollable on mobile -->
+<div class="flex-1 overflow-x-auto category-scroll py-2">
+<div class="flex gap-2 min-w-max">
+<button class="px-4 py-1.5 rounded-full bg-brand-green text-white font-semibold text-sm whitespace-nowrap">All News</button>
+<button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<i class="fas fa-bullhorn text-brand-yellow text-xs"></i> Announcements
+</button>
+<button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<i class="fas fa-graduation-cap text-brand-yellow text-xs"></i> Programs
+</button>
+<button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<i class="fas fa-users text-brand-yellow text-xs"></i> Community
+</button>
+<button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<i class="fas fa-handshake text-brand-yellow text-xs"></i> Partnerships
+</button>
+<button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<i class="fas fa-calendar text-brand-yellow text-xs"></i> Events
+</button>
+<button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<i class="fas fa-newspaper text-brand-yellow text-xs"></i> Media
+</button>
+</div>
+</div>
+<!-- Desktop Search -->
+<div class="hidden md:block relative w-48 lg:w-64 flex-shrink-0">
+<input class="w-full pl-4 pr-10 py-1.5 border border-gray-200 rounded-full focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Search news..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2">
+<svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<!-- Mobile hint -->
+<p class="text-[10px] text-gray-400 mt-2 md:hidden"><i class="fas fa-chevron-left"></i> Swipe to see more categories <i class="fas fa-chevron-right"></i></p>
+</div>
+</section>
+<!-- END: FilterBar -->
+
+<!-- BEGIN: ContentGrid -->
+<section class="py-12 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="grid lg:grid-cols-12 gap-8">
+<!-- Main Content Area -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Featured Article -->
+<article class="group bg-white rounded-3xl overflow-hidden shadow-sm border hover:shadow-md transition-shadow">
+<div class="relative h-64 md:h-80 lg:h-96">
+<img alt="Featured News" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU0Q_Plt7dwMw3DUH6VnKbUVbk3IGhf0xfrrg1UL0HXdVQfKaut3QzIskkGaMJ_Xpam4itYcpeWyJa17PEDUgnJXqFUlTmnkGnwIxyLmEGW8cqVkg02JQ562i5IBsjZBz1CDMnhD0CatDloDtGiTxsQfMrj7KXrfT2aO4QyIoXWkeeIXV_uM5LMks3TaKGaLExBePRG6N2snXbZDHYmCLRV2hOjfH44pkIcx23rVOrEF0fg2dPQflM"/>
+<div class="absolute top-4 left-4">
+<span class="bg-brand-yellow text-brand-dark px-3 py-1 rounded-full text-xs font-bold uppercase">Featured</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4 md:p-8 text-white">
+<p class="text-xs font-medium opacity-80 mb-1 md:mb-2">May 15, 2025</p>
+<h2 class="text-xl md:text-3xl font-bold mb-2 md:mb-4">Inspiring the Next Generation of Innovators</h2>
+<p class="text-gray-200 line-clamp-2 max-w-2xl mb-4 text-sm md:text-base">Our STEM Explorers program continues to ignite curiosity and empower young minds through hands-on learning and creativity.</p>
+<a href="news-detail.html" class="inline-block bg-brand-yellow hover:bg-brand-darkYellow text-brand-dark px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-transform group-hover:scale-105">
+                    Read More 
+                    <i class="fas fa-arrow-right text-xs"></i>
+</a>
+</div>
+</div>
+</article>
+
+<!-- Articles Grid -->
+<div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+<!-- Article 1 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col">
+<img alt="Article Image" class="w-full h-40 md:h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8BGiYNS7NYQK1AmM4oO-LpDElCgglW1pFC1v7zCTjr6qmMv9BUp7VryuHhV-KdgTqpxVqyy_3qxDQulAXFXYER0zujBpUeRRCXgHK76etZ40d5TdffROLhhujhd6NSdYhLrVTNOSMyi7k9PtHggmdwPeLwBYOq_h12o0Btu7_omy1jw6ZQcaCel-uBES5-M2nzsLi7mt7VDpQlgcKdKT8HSV4HzLMd_qAQjLe47sF-Kh2yq3AWYT_"/>
+<div class="p-4 md:p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center mb-3">
+<span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Programs</span>
+<span class="text-[11px] text-gray-400">May 8, 2025</span>
+</div>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">New Reading Corner Opens in Kintampo Community</a></h3>
+<p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">A new reading space has been opened to promote literacy and a love for books among children.</p>
+<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+</div>
+</article>
+
+<!-- Article 2 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col">
+<img alt="Article Image" class="w-full h-40 md:h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR427WZ8b18fiYXC9LIkmg8uECx1_v6flaxA43I_OcFgPMto4xdhji-vWyd4MY91AzV5XK25Z21PGAGhcJBhVt9UDhPXu4ireUL1AOLU9K5NZGsh9Q86wgFRdLtt-1lmphCzDDzo0DR3xLV4E2keV6xMLn82ehtIPG4uMVmc2R6FVaIP5HvVNxdiOe3WvTZ2qgLbBxIgsPEtEZqBhWaWD6n0BMFtVcS-Cpl0CvZmt9ROjW60IGmv2U"/>
+<div class="p-4 md:p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center mb-3">
+<span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Partnerships</span>
+<span class="text-[11px] text-gray-400">April 28, 2025</span>
+</div>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">Partnership with Green Future Foundation</a></h3>
+<p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">Together, we are planting trees and building awareness on environmental sustainability.</p>
+<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+</div>
+</article>
+
+<!-- Article 3 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col">
+<img alt="Article Image" class="w-full h-40 md:h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOXrr5jjXMjXvgiW46ggNkXGMbQFGc3w808fJbRVsoFp9K04j6-vWeHEvMmoF-L8TIFg5dHVeZ5k74FpQ9ntSkGG7TREPi81yYehWmn346YvDOMyJ2RRRK7yXMqctGPXZhHeYUsxB58kv7rLyS5K1lGqAD_WdV6dpmTsP9YmQS8IcyZNHged_jwITtuqcr4Op86--hy4dT9zgfns5QveuoobfigzW8WDo-jA1gYbcyskH1rb6BdXGs"/>
+<div class="p-4 md:p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center mb-3">
+<span class="text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-600 px-2 py-1 rounded">Events</span>
+<span class="text-[11px] text-gray-400">April 20, 2025</span>
+</div>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">STEM Workshop for Kids A Big Success!</a></h3>
+<p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">Hands-on activities, teamwork, and innovation made our STEM workshop unforgettable.</p>
+<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+</div>
+</article>
+
+<!-- Article 4 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col">
+<img alt="Article Image" class="w-full h-40 md:h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4UEobg157vrX6HPybg5s91fXvdC7slWCkrNqL4t1kOzuPOcojf1ps2bIIZEgKQroWPum0yLaiBrX4BnrOxjZT1QIGniXqVkhT63YELYrPvckcL34N3SnvKsdSJe1sy_dD2oysV3x7VsUbITrAHBRV9gDeynX9ZSu1Qd5j4e7vPXtsaT7RUUsD1H9vGxohZ3RQo-2rU4NrwFJE9mCauvbjtGjs1J4o0Bxa2UGgnUXnm4GhOwKRSLi"/>
+<div class="p-4 md:p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center mb-3">
+<span class="text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 px-2 py-1 rounded">Media Coverage</span>
+<span class="text-[11px] text-gray-400">April 10, 2025</span>
+</div>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">Sua Ne Ani Featured on Ghana Education News</a></h3>
+<p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">We were featured for our commitment to quality education and community transformation.</p>
+<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+</div>
+</article>
+</div>
+
+<!-- Pagination -->
+<div class="flex flex-wrap items-center justify-center gap-2 py-8">
+<button class="p-2 border rounded-lg hover:bg-gray-100"><i class="fas fa-chevron-left text-sm"></i></button>
+<button class="w-9 h-9 rounded-lg bg-brand-green text-white font-bold text-sm">1</button>
+<button class="w-9 h-9 rounded-lg hover:bg-gray-100 font-medium text-sm">2</button>
+<button class="w-9 h-9 rounded-lg hover:bg-gray-100 font-medium text-sm">3</button>
+<span class="px-2 text-sm">...</span>
+<button class="w-9 h-9 rounded-lg hover:bg-gray-100 font-medium text-sm">12</button>
+<button class="p-2 border rounded-lg hover:bg-gray-100"><i class="fas fa-chevron-right text-sm"></i></button>
+</div>
+</div>
+
+<!-- Sidebar Area -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- Latest Announcements -->
+<div class="bg-[#FFF9EA] p-6 md:p-8 rounded-3xl border border-brand-yellow/30">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-brand-yellow p-2 rounded-lg">
+<i class="fas fa-bullhorn text-white"></i>
+</div>
+<h3 class="font-bold text-xl">Latest Announcements</h3>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<img alt="Thumb" class="w-16 h-16 rounded-xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0yRkOHzvHqiLvF5Wgh_3QvjSLfca1DOHmwMi4rUunehL81J6ap11rRUoTdW_lRPH1ADRJvrirPXJMk_4fQvv49OEB0UgINFsaG3wd5VVN0hk0aohqhcsSG7mDztp35ZG8kl8erm0cUjRnZGMhgGRDaJbjwusBNDepD0BNqJdeJQzO34u9yGod7BbJFoZalx0zueWxh9Bk-as3qnF0XRU9WVKB2QwrDearOmhNNb6VOmzsauOnEa2k"/>
+<div>
+<p class="text-[10px] text-gray-500 font-bold uppercase mb-1">May 18, 2025</p>
+<h4 class="font-bold text-sm leading-tight mb-2">Holiday Learning Camp Coming This June!</h4>
+<a href="#" class="text-brand-green font-bold text-xs flex items-center gap-1 hover:gap-2 transition-all">Learn More <i class="fas fa-arrow-right text-[10px]"></i></a>
+</div>
+</div>
+<div class="flex gap-4">
+<img alt="Thumb" class="w-16 h-16 rounded-xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRpRiuxJj4T6ugEXMEK5r9CGyyOojb-IypQetGNeIbkPGDHEBoap-57N5tuCpxWEFIqRCCI24LS96vvViWOcBCliXydK3ae71Q-g1DmnEauGhujb1mpK2QCzgNQxrb4nMXB6TLz3UB8rsRCQTS6MfISvXcD-rxV6GGY-ktJ-X-SRrGIsONYAom47E0BckOx01QlcD0R2hhMJRtPLUiWtdHrVl8PNLVRujc2r1cBD_7PNGIav3pbP2_"/>
+<div>
+<p class="text-[10px] text-gray-500 font-bold uppercase mb-1">May 5, 2025</p>
+<h4 class="font-bold text-sm leading-tight mb-2">Call for Volunteers: Join Our June Outreach</h4>
+<a href="#" class="text-brand-green font-bold text-xs flex items-center gap-1 hover:gap-2 transition-all">Learn More <i class="fas fa-arrow-right text-[10px]"></i></a>
+</div>
+</div>
+<div class="flex gap-4">
+<img alt="Thumb" class="w-16 h-16 rounded-xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqBlgvLzcyM7aQKODneIzwaSdCexOJ4EGMyrd8FVPrSLko1lsnYHK7ojEQlUwlMbViDIHdBuHg36rKV2E4pjoXxZAxaBjNUpLx0YRQXz2u_7MwTIaEWtz_CSqDAAUVrolloK-9JGLlsSeqT6TZPn4_GajO-KlXoGnp5LQ9eu5cC-YjWg8_69615p1JpKhh9UbIGSXIvvCfhWKU2Yu85vPTZh5OkrUGjmS9CrGYP7VXt-HV05Z2TZjT"/>
+<div>
+<p class="text-[10px] text-gray-500 font-bold uppercase mb-1">April 22, 2025</p>
+<h4 class="font-bold text-sm leading-tight mb-2">School Supply Drive Starts May 1st</h4>
+<a href="#" class="text-brand-green font-bold text-xs flex items-center gap-1 hover:gap-2 transition-all">Learn More <i class="fas fa-arrow-right text-[10px]"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Newsletter Subscription -->
+<div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden">
+<h3 class="font-bold text-xl mb-3">Subscribe to Our Newsletter</h3>
+<p class="text-gray-500 text-sm mb-6">Get the latest news, stories, and updates delivered to your inbox.</p>
+<div class="space-y-4">
+<input class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Enter your email address" type="email"/>
+<button class="w-full bg-brand-green text-white font-bold py-3 rounded-xl hover:bg-opacity-90 transition-all">Subscribe</button>
+</div>
+<div class="mt-6 flex items-center gap-2 text-[10px] text-gray-400">
+<i class="fas fa-lock text-[10px]"></i>
+                We respect your privacy and never share your information.
+</div>
+<!-- Decorative -->
+<div class="absolute -bottom-2 -right-2 opacity-20">
+<img alt="Decoration" class="w-16" src="images/bee.png"/>
+</div>
+</div>
+
+<!-- Follow Us -->
+<div class="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm">
+<h3 class="font-bold text-xl mb-4">Follow Us</h3>
+<p class="text-sm text-gray-500 mb-6">Join our online community and be part of the conversation.</p>
+<div class="flex flex-wrap gap-3">
+<a class="w-10 h-10 bg-[#3b5998] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" href="#"><i class="fab fa-x-twitter"></i></a>
+<a class="w-10 h-10 bg-[#e4405f] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" href="#"><i class="fab fa-instagram"></i></a>
+<a class="w-10 h-10 bg-[#0077b5] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" href="#"><i class="fab fa-linkedin-in"></i></a>
+<a class="w-10 h-10 bg-[#ff0000] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+
+<!-- Quote Block -->
+<div class="bg-[#FFF9EA] p-6 md:p-8 rounded-3xl border-l-8 border-brand-yellow relative">
+<div class="absolute top-4 left-4 text-brand-yellow opacity-40">
+<i class="fas fa-quote-left text-4xl"></i>
+</div>
+<p class="font-bold text-lg leading-relaxed text-brand-dark mb-4 pl-4 pt-2">
+                Every story shared is a step closer to a better tomorrow.
+              </p>
+<div class="absolute bottom-4 right-4">
+<img alt="Bee" class="w-10" src="images/bee.png"/>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- END: ContentGrid -->
+
+<!-- BEGIN: CallToAction -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<div class="bg-brand-yellow rounded-[2.5rem] p-8 md:p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="absolute inset-0 honeycomb-pattern"></div>
+<div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 relative z-10 text-center lg:text-left">
+<img alt="Bee Mascot" class="w-20 lg:w-32" src="images/bees.png"/>
+<div>
+<h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-2">Be Part of the Story. Help Write the Future.</h2>
+<p class="text-brand-dark/80 font-medium max-w-lg text-sm md:text-base">Every article, every update, every milestone is made possible because of people like you.</p>
+</div>
+</div>
+<a href="get-involved.html" class="relative z-10 bg-brand-green text-white font-bold py-3 md:py-4 px-6 md:px-10 rounded-full flex items-center gap-3 group hover:scale-105 transition-transform text-sm md:text-base">
+            Get Involved Today
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- END: CallToAction -->
+
+<!-- ===== FOOTER COMPONENT ===== -->
+<div id="footer-component"></div>
+
+<!-- Script to load components and set active tab -->
+<script>
+  // Function to set active tab (defined globally)
+  function setActiveTab() {
+    console.log('Setting active tab...');
+    
+    // Get current page filename from URL
+    const path = window.location.pathname;
+    let currentPage = path.split('/').pop() || 'index.html';
+    
+    // Handle cases where page might be loaded with query parameters or hash
+    currentPage = currentPage.split('?')[0].split('#')[0];
+    
+    // Special case: if the page is the root (like / or /index.html), treat as home
+    let pageName = currentPage === 'index.html' || currentPage === '' ? 'home' : currentPage.replace('.html', '');
+    
+    console.log('Current page:', currentPage, 'Page name:', pageName);
+    
+    // Set active class on desktop nav links
+    const desktopLinks = document.querySelectorAll('#main-nav a[data-page]');
+    console.log('Desktop links found:', desktopLinks.length);
+    
+    desktopLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Remove any existing active classes first
+      link.classList.remove('nav-link-active', 'nav-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('nav-link-active');
+        console.log('Active desktop link:', linkPage);
+      } else {
+        link.classList.add('nav-link-inactive');
+      }
+    });
+
+    // Set active class on mobile nav links
+    const mobileLinks = document.querySelectorAll('#mobile-panel a[data-page]');
+    console.log('Mobile links found:', mobileLinks.length);
+    
+    mobileLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      // Reset classes
+      link.classList.remove('mobile-link-active', 'mobile-link-inactive');
+      
+      if (linkPage === pageName) {
+        link.classList.add('mobile-link-active');
+        console.log('Active mobile link:', linkPage);
+      } else {
+        link.classList.add('mobile-link-inactive');
+      }
+    });
+  }
+
+  // Function to load header and footer
+  function loadComponents() {
+  // Load header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-component').innerHTML = data;
+      console.log('Header loaded successfully');
+      
+      // Re-initialize mobile menu after header is inserted
+      setTimeout(() => {
+        if (typeof initHeaderMobileMenu === 'function') {
+          initHeaderMobileMenu();
+        } else if (window.initHeaderMobileMenu) {
+          window.initHeaderMobileMenu();
+        } else {
+          console.log('Header script not loaded, trying to initialize manually');
+        }
+        
+        // Set active tab after header is fully loaded and mobile menu is initialized
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 200);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+      setTimeout(() => {
+        if (typeof setActiveTab === 'function') {
+          setActiveTab();
+        }
+      }, 500);
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load footer');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('footer-component').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => console.error('Error loading footer:', error));
+}
+
+// Fallback: Set up mobile menu using event delegation
+function setupMobileMenuFallback() {
+  document.addEventListener('click', function(e) {
+    const openBtn = e.target.closest('#menu-open');
+    if (openBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.add('open');
+      if (panel) panel.classList.add('open');
+      if (document.body) document.body.classList.add('no-scroll');
+      return;
+    }
+
+    const closeBtn = e.target.closest('#close-mobile');
+    if (closeBtn) {
+      e.preventDefault();
+      const overlay = document.getElementById('mobile-overlay');
+      const panel = document.getElementById('mobile-panel');
+      if (overlay) overlay.classList.remove('open');
+      if (panel) panel.classList.remove('open');
+      if (document.body) document.body.classList.remove('no-scroll');
+      return;
+    }
+
+    const overlay = e.target.closest('#mobile-overlay');
+    if (overlay) {
+      const panel = document.getElementById('mobile-panel');
+      if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        if (document.body) document.body.classList.remove('no-scroll');
+      }
+    }
+  });
+}
+
+// Call this after header is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupMobileMenuFallback);
+} else {
+  setupMobileMenuFallback();
+}
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadComponents);
+  } else {
+    loadComponents();
+  }
+
+  // Also try setting active tab after a delay as a fallback
+  setTimeout(setActiveTab, 1000);
+  
+  // And again after 2 seconds for good measure
+  setTimeout(setActiveTab, 2000);
+
+  // Listen for page changes (for future SPA-like behavior)
+  window.addEventListener('popstate', function() {
+    setTimeout(setActiveTab, 100);
+  });
+</script>
+
+</body>
+</html>
