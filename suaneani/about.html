@@ -264,11 +264,11 @@
           <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd"></path>
         </svg>
       </button>
-      <div class="flex flex-1 justify-between items-center gap-8 px-4 flex-wrap">
+      <div class="flex flex-1 justify-between items-center gap-8 px-4 flex-wrap" data-list="partners">
         <!-- Updated with new partner logos/names (placeholder images) -->
         <div class="flex flex-col items-center">
-          <img alt="Adwinsa" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/adwinsa.png"/>
-          <span class="text-xs text-slate-500 mt-1">Adwinsa</span>
+          <img data-f="logo" alt="Adwinsa" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/adwinsa.png"/>
+          <span class="text-xs text-slate-500 mt-1" data-f="name">Adwinsa</span>
         </div>
         <div class="flex flex-col items-center">
           <img alt="PentecostPress Limited" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition cursor-pointer" src="partners/pentecost.png"/>
@@ -447,5 +447,6 @@
   });
 </script>
 
+<script type="module" src="js/site-content.js"></script>
 </body>
 </html>

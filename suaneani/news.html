@@ -105,7 +105,7 @@
           </p>
 <!-- Search on mobile -->
 <div class="relative w-full max-w-md md:hidden">
-<input class="w-full pl-4 pr-10 py-3 border border-gray-200 rounded-full focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Search news..." type="text"/>
+<input data-news-search class="w-full pl-4 pr-10 py-3 border border-gray-200 rounded-full focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Search news..." type="text"/>
 <button class="absolute right-3 top-1/2 -translate-y-1/2">
 <svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
@@ -129,7 +129,7 @@
 <div class="flex items-center gap-3">
 <!-- Category Filter - Scrollable on mobile -->
 <div class="flex-1 overflow-x-auto category-scroll py-2">
-<div class="flex gap-2 min-w-max">
+<div class="flex gap-2 min-w-max" data-news-filters>
 <button class="px-4 py-1.5 rounded-full bg-brand-green text-white font-semibold text-sm whitespace-nowrap">All News</button>
 <button class="px-4 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 text-sm font-medium whitespace-nowrap flex items-center gap-1.5 transition-colors">
 <i class="fas fa-bullhorn text-brand-yellow text-xs"></i> Announcements
@@ -153,7 +153,7 @@
 </div>
 <!-- Desktop Search -->
 <div class="hidden md:block relative w-48 lg:w-64 flex-shrink-0">
-<input class="w-full pl-4 pr-10 py-1.5 border border-gray-200 rounded-full focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Search news..." type="text"/>
+<input data-news-search class="w-full pl-4 pr-10 py-1.5 border border-gray-200 rounded-full focus:ring-brand-green focus:border-brand-green text-sm" placeholder="Search news..." type="text"/>
 <button class="absolute right-3 top-1/2 -translate-y-1/2">
 <svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
@@ -172,18 +172,18 @@
 <!-- Main Content Area -->
 <div class="lg:col-span-8 space-y-12">
 <!-- Featured Article -->
-<article class="group bg-white rounded-3xl overflow-hidden shadow-sm border hover:shadow-md transition-shadow">
+<article data-news-featured class="group bg-white rounded-3xl overflow-hidden shadow-sm border hover:shadow-md transition-shadow">
 <div class="relative h-64 md:h-80 lg:h-96">
-<img alt="Featured News" class="w-full h-full object-cover" src="images/ghana/girl-hand-raised.jpg"/>
+<img data-f="img" alt="Featured News" class="w-full h-full object-cover" src="images/ghana/girl-hand-raised.jpg"/>
 <div class="absolute top-4 left-4">
 <span class="bg-brand-yellow text-brand-dark px-3 py-1 rounded-full text-xs font-bold uppercase">Featured</span>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-4 md:p-8 text-white">
-<p class="text-xs font-medium opacity-80 mb-1 md:mb-2">May 15, 2025</p>
-<h2 class="text-xl md:text-3xl font-bold mb-2 md:mb-4">Inspiring the Next Generation of Innovators</h2>
-<p class="text-gray-200 line-clamp-2 max-w-2xl mb-4 text-sm md:text-base">Our STEM Explorers program continues to ignite curiosity and empower young minds through hands-on learning and creativity.</p>
-<a href="news-detail.html" class="inline-block bg-brand-yellow hover:bg-brand-darkYellow text-brand-dark px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-transform group-hover:scale-105">
+<p class="text-xs font-medium opacity-80 mb-1 md:mb-2" data-f="date">May 15, 2025</p>
+<h2 class="text-xl md:text-3xl font-bold mb-2 md:mb-4" data-f="title">Inspiring the Next Generation of Innovators</h2>
+<p class="text-gray-200 line-clamp-2 max-w-2xl mb-4 text-sm md:text-base" data-f="excerpt">Our STEM Explorers program continues to ignite curiosity and empower young minds through hands-on learning and creativity.</p>
+<a data-f="link" href="news-details.html" class="inline-block bg-brand-yellow hover:bg-brand-darkYellow text-brand-dark px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-transform group-hover:scale-105">
                     Read More 
                     <i class="fas fa-arrow-right text-xs"></i>
 </a>
@@ -192,18 +192,18 @@
 </article>
 
 <!-- Articles Grid -->
-<div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+<div class="grid sm:grid-cols-2 gap-6 md:gap-8" data-list="news">
 <!-- Article 1 -->
 <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow flex flex-col">
-<img alt="Article Image" class="w-full h-40 md:h-48 object-cover" src="images/ghana/children-with-books.jpg"/>
+<img data-f="img" alt="Article Image" class="w-full h-40 md:h-48 object-cover" src="images/ghana/children-with-books.jpg"/>
 <div class="p-4 md:p-6 flex flex-col flex-grow">
 <div class="flex justify-between items-center mb-3">
-<span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Programs</span>
-<span class="text-[11px] text-gray-400">May 8, 2025</span>
+<span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded" data-f="category">Programs</span>
+<span class="text-[11px] text-gray-400" data-f="date">May 8, 2025</span>
 </div>
-<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">New Reading Corner Opens in Kintampo Community</a></h3>
-<p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">A new reading space has been opened to promote literacy and a love for books among children.</p>
-<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors" data-f="title"><a data-f="link" href="news-details.html">New Reading Corner Opens in Kintampo Community</a></h3>
+<p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2" data-f="excerpt">A new reading space has been opened to promote literacy and a love for books among children.</p>
+<a data-f="link" href="news-details.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
 </div>
 </article>
 
@@ -215,9 +215,9 @@
 <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Partnerships</span>
 <span class="text-[11px] text-gray-400">April 28, 2025</span>
 </div>
-<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">Partnership with Green Future Foundation</a></h3>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-details.html">Partnership with Green Future Foundation</a></h3>
 <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">Together, we are planting trees and building awareness on environmental sustainability.</p>
-<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+<a href="news-details.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
 </div>
 </article>
 
@@ -229,9 +229,9 @@
 <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-600 px-2 py-1 rounded">Events</span>
 <span class="text-[11px] text-gray-400">April 20, 2025</span>
 </div>
-<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">STEM Workshop for Kids A Big Success!</a></h3>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-details.html">STEM Workshop for Kids A Big Success!</a></h3>
 <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">Hands-on activities, teamwork, and innovation made our STEM workshop unforgettable.</p>
-<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+<a href="news-details.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
 </div>
 </article>
 
@@ -243,15 +243,15 @@
 <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 px-2 py-1 rounded">Media Coverage</span>
 <span class="text-[11px] text-gray-400">April 10, 2025</span>
 </div>
-<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-detail.html">Sua Ne Ani Featured on Ghana Education News</a></h3>
+<h3 class="font-bold text-base md:text-lg mb-2 hover:text-brand-green transition-colors"><a href="news-details.html">Sua Ne Ani Featured on Ghana Education News</a></h3>
 <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-2">We were featured for our commitment to quality education and community transformation.</p>
-<a href="news-detail.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+<a href="news-details.html" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <i class="fas fa-arrow-right text-xs"></i></a>
 </div>
 </article>
 </div>
 
 <!-- Pagination -->
-<div class="flex flex-wrap items-center justify-center gap-2 py-8">
+<div data-news-pagination class="flex flex-wrap items-center justify-center gap-2 py-8">
 <button class="p-2 border rounded-lg hover:bg-gray-100"><i class="fas fa-chevron-left text-sm"></i></button>
 <button class="w-9 h-9 rounded-lg bg-brand-green text-white font-bold text-sm">1</button>
 <button class="w-9 h-9 rounded-lg hover:bg-gray-100 font-medium text-sm">2</button>
@@ -272,13 +272,13 @@
 </div>
 <h3 class="font-bold text-xl">Latest Announcements</h3>
 </div>
-<div class="space-y-6">
+<div class="space-y-6" data-list="announcements">
 <div class="flex gap-4">
-<img alt="Thumb" class="w-16 h-16 rounded-xl object-cover shrink-0" src="images/ghana/children-waving.jpg"/>
+<img data-f="img" alt="Thumb" class="w-16 h-16 rounded-xl object-cover shrink-0" src="images/ghana/children-waving.jpg"/>
 <div>
-<p class="text-[10px] text-gray-500 font-bold uppercase mb-1">May 18, 2025</p>
-<h4 class="font-bold text-sm leading-tight mb-2">Holiday Learning Camp Coming This June!</h4>
-<a href="#" class="text-brand-green font-bold text-xs flex items-center gap-1 hover:gap-2 transition-all">Learn More <i class="fas fa-arrow-right text-[10px]"></i></a>
+<p class="text-[10px] text-gray-500 font-bold uppercase mb-1" data-f="date">May 18, 2025</p>
+<h4 class="font-bold text-sm leading-tight mb-2" data-f="title">Holiday Learning Camp Coming This June!</h4>
+<a data-f="link" href="#" class="text-brand-green font-bold text-xs flex items-center gap-1 hover:gap-2 transition-all">Learn More <i class="fas fa-arrow-right text-[10px]"></i></a>
 </div>
 </div>
 <div class="flex gap-4">
@@ -543,5 +543,6 @@ if (document.readyState === 'loading') {
   });
 </script>
 
+<script type="module" src="js/site-content.js"></script>
 </body>
 </html>

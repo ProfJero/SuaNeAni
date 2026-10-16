@@ -127,10 +127,10 @@
 </nav>
 
 <!-- Category Badge -->
-<span class="inline-block bg-brand-yellow text-brand-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase mb-4">Featured Story</span>
+<span data-news="category" class="inline-block bg-brand-yellow text-brand-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase mb-4">Featured Story</span>
 
 <!-- Title -->
-<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-brand-dark mb-4">
+<h1 data-news="title" class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-brand-dark mb-4">
   Inspiring the Next Generation of Innovators
 </h1>
 
@@ -138,7 +138,7 @@
 <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
   <span class="flex items-center gap-2">
     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-    May 15, 2025
+    <span data-news="date">May 15, 2025</span>
   </span>
   <span class="flex items-center gap-2">
     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
@@ -146,7 +146,7 @@
   </span>
   <span class="flex items-center gap-2">
     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-    5 min read
+    <span data-news="readtime">5 min read</span>
   </span>
 </div>
 
@@ -179,11 +179,12 @@
 <div class="lg:col-span-8">
 <!-- Featured Image -->
 <div class="rounded-3xl overflow-hidden shadow-lg mb-10">
-<img alt="Featured Article Image" class="w-full h-auto" src="images/ghana/girl-hand-raised.jpg"/>
+<img data-news="image" alt="Featured Article Image" class="w-full h-auto" src="images/ghana/girl-hand-raised.jpg"/>
 </div>
 
 <!-- Article Body -->
 <div class="prose-custom max-w-none">
+<div data-news="body">
 <p class="text-lg text-gray-600 leading-relaxed">
   <strong class="text-brand-dark">In the heart of Kintampo, a quiet revolution is taking place.</strong> 
   Children who once had limited access to technology and hands-on learning are now building robots, coding their first programs, and dreaming of futures they never thought possible.
@@ -269,9 +270,10 @@
     Get Involved Today
   </a>
 </div>
+</div>
 
 <!-- Tags -->
-<div class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
+<div data-news="tags" class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
   <span class="text-sm font-bold text-gray-500 mr-2">Tags:</span>
   <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">STEM Education</span>
   <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Innovation</span>
@@ -368,12 +370,12 @@
 <!-- Recent Posts -->
 <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
   <h4 class="font-bold text-lg mb-4">Recent Posts</h4>
-  <div class="space-y-4">
+  <div class="space-y-4" data-list="recent">
     <div class="flex gap-3">
-      <img alt="Recent post" class="w-16 h-16 rounded-xl object-cover shrink-0" src="images/ghana/children-with-books.jpg"/>
+      <img data-f="img" alt="Recent post" class="w-16 h-16 rounded-xl object-cover shrink-0" src="images/ghana/children-with-books.jpg"/>
       <div>
-        <p class="text-[10px] text-gray-400">May 8, 2025</p>
-        <a href="#" class="text-sm font-bold text-brand-dark hover:text-brand-green transition-colors">New Reading Corner Opens in Kintampo</a>
+        <p class="text-[10px] text-gray-400" data-f="date">May 8, 2025</p>
+        <a data-f="title-link" href="#" class="text-sm font-bold text-brand-dark hover:text-brand-green transition-colors">New Reading Corner Opens in Kintampo</a>
       </div>
     </div>
     <div class="flex gap-3">
@@ -419,18 +421,18 @@
     View All News <span>→</span>
   </a>
 </div>
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid md:grid-cols-3 gap-8" data-list="related">
   <!-- Related Article 1 -->
   <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow group">
-    <img alt="Related article" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" src="images/ghana/children-with-books.jpg"/>
+    <img data-f="img" alt="Related article" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" src="images/ghana/children-with-books.jpg"/>
     <div class="p-6">
       <div class="flex justify-between items-center mb-3">
-        <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded">Programs</span>
-        <span class="text-[11px] text-gray-400">May 8, 2025</span>
+        <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-lightGreen text-brand-green px-2 py-1 rounded" data-f="category">Programs</span>
+        <span class="text-[11px] text-gray-400" data-f="date">May 8, 2025</span>
       </div>
-      <h3 class="font-bold text-lg mb-2 group-hover:text-brand-green transition-colors">New Reading Corner Opens in Kintampo Community</h3>
-      <p class="text-sm text-gray-600 mb-4">A new reading space has been opened to promote literacy and a love for books among children.</p>
-      <a href="#" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+      <h3 class="font-bold text-lg mb-2 group-hover:text-brand-green transition-colors" data-f="title">New Reading Corner Opens in Kintampo Community</h3>
+      <p class="text-sm text-gray-600 mb-4" data-f="excerpt">A new reading space has been opened to promote literacy and a love for books among children.</p>
+      <a data-f="link" href="#" class="text-brand-green font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Read More <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
     </div>
   </article>
 
@@ -663,5 +665,6 @@ if (document.readyState === 'loading') {
   });
 </script>
 
+<script type="module" src="js/site-content.js"></script>
 </body>
 </html>

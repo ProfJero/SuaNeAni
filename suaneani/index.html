@@ -291,14 +291,14 @@
       <span class="text-orange-500 font-bold uppercase tracking-widest text-sm"><i class="fas fa-quote-left mr-2"></i>What People Say</span>
       <h2 class="text-4xl font-bold mt-2">Voices of Our Community</h2>
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-8" data-list="testimonials">
       <!-- Student -->
       <div class="bg-white p-8 rounded-3xl relative shadow-sm">
         <div class="absolute -top-4 left-8 text-6xl text-orange-200"><i class="fas fa-quote-left"></i></div>
-        <p class="text-gray-600 mb-8 pt-4">“It makes learning so exciting! I never imagined that learning can be so much fun!”</p>
+        <p class="text-gray-600 mb-8 pt-4" data-f="quote">“I never imagined that learning can be so much fun!”</p>
         <div class="flex items-center gap-4">
-          <img alt="Student" class="w-12 h-12 rounded-full object-cover" src="images/ghana/avatar-student.jpg"/>
-          <div><h5 class="font-bold">Student</h5><p class="text-xs text-orange-500">Learner</p></div>
+          <img data-f="photo" alt="Student" class="w-12 h-12 rounded-full object-cover" src="images/ghana/avatar-student.jpg"/>
+          <div><h5 class="font-bold" data-f="name">Student</h5><p class="text-xs text-orange-500" data-f="role">Learner</p></div>
         </div>
       </div>
       <!-- Teacher (Peter from North Legon) -->
@@ -505,5 +505,6 @@ if (document.readyState === 'loading') {
   });
 </script>
 
+<script type="module" src="js/site-content.js"></script>
 </body>
 </html>
