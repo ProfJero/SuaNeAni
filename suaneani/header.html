@@ -317,7 +317,8 @@
   <a href="partners-technology.html" class="mobile-link-inactive"><i class="fas fa-microchip"></i> Tech Partners</a>
   
   <a href="contact.html" data-page="contact" class="mobile-link-inactive"><i class="fas fa-envelope"></i> Contact</a>
-  <a href="donate.html" class="donate-mobile"><i class="fas fa-heart"></i> Donate</a>
+  <!-- Donate hidden until payment is connected -->
+  <a href="donate.html" class="donate-mobile" style="display:none"><i class="fas fa-heart"></i> Donate</a>
 </div>
 
 <!-- MAIN HEADER -->
@@ -358,9 +359,11 @@
     </nav>
 
     <div class="flex items-center gap-3">
+      <!-- Donate hidden until payment is connected
       <a class="hidden md:flex donate-btn-glass" href="donate.html">
         <i class="fas fa-heart text-white"></i> Donate
       </a>
+      -->
       <button id="menu-open" class="md:hidden text-2xl text-orange-900 focus:outline-none hamburger-btn" aria-label="Open menu">
         <i class="fas fa-bars"></i>
       </button>
