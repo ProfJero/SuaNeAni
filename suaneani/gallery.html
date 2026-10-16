@@ -141,15 +141,15 @@
 <!-- BEGIN: GalleryGrid -->
 <section class="py-12">
 <div class="container mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="gallery-grid">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="gallery-grid" data-list="gallery">
 <!-- Gallery Card 1 -->
 <div class="gallery-card group" data-purpose="gallery-item">
 <div class="bg-white rounded-sua shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-xl">
 <div class="overflow-hidden h-56">
-<img alt="Digital Learning" class="w-full h-full object-cover transition-transform duration-500" src="images/image02.jpg"/>
+<img data-f="img" alt="Digital Learning" class="w-full h-full object-cover transition-transform duration-500" src="images/image02.jpg"/>
 </div>
 <div class="p-5 text-center">
-<h3 class="font-bold text-sua-dark-green">Digital Learning in Action</h3>
+<h3 class="font-bold text-sua-dark-green" data-f="title">Digital Learning in Action</h3>
 </div>
 </div>
 </div>
@@ -252,8 +252,8 @@
 </div>
 <!-- Pagination/Load More -->
 <div class="mt-16 flex flex-col items-center gap-4">
-<p class="text-gray-500 text-sm font-medium">Showing 1 – 8 of 24</p>
-<button class="px-10 py-4 border-2 border-sua-dark-green text-sua-dark-green font-bold rounded-full hover:bg-sua-dark-green hover:text-white transition-all flex items-center gap-2">
+<p class="text-gray-500 text-sm font-medium" data-gallery-count>Showing 1 – 8 of 24</p>
+<button data-gallery-more class="px-10 py-4 border-2 border-sua-dark-green text-sua-dark-green font-bold rounded-full hover:bg-sua-dark-green hover:text-white transition-all flex items-center gap-2">
           Load More 
           <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
@@ -464,5 +464,6 @@ if (document.readyState === 'loading') {
   });
 </script>
 
+<script type="module" src="js/site-content.js"></script>
 </body>
 </html>
