@@ -99,10 +99,18 @@ How content works:
 
 ## Showing the Gallery and News pages
 
-They are ready but hidden from the menus. To show them, uncomment the marked lines
-(`<!-- Gallery & News: uncomment ... -->`) in:
-- `suaneani/header.html` (desktop menu and mobile menu)
-- `suaneani/footer.html` (Quick Links)
+They are ready but hidden from the menus. To show them, open `suaneani/js/layout.js`
+and uncomment the lines marked `<!-- Gallery & News: uncomment ... -->`. There are three places:
+the mobile menu, the desktop menu and the footer's Quick Links. Remove the `<!-- ` and ` -->`
+around each link, for example:
+
+```html
+<!-- <a href="gallery.html" data-page="gallery" ...>Gallery</a> -->
+```
+becomes
+```html
+<a href="gallery.html" data-page="gallery" ...>Gallery</a>
+```
 
 Then push and merge to `main`.
 
@@ -113,6 +121,7 @@ Then push and merge to `main`.
 - `suaneani/js/firebase.js`: Firebase config (public by design; security comes from the rules) and Cloudinary settings.
 - `suaneani/js/forms.js`: saves the Contact form; `suaneani/js/partner-form.js`: the partner pop-up form.
 - `suaneani/js/site-content.js`: loads published content into the pages. Lists use the first item in the HTML as the template (`data-list`, `data-f` attributes).
+- `suaneani/js/layout.js`: the menu (header) and footer shared by all pages.
 - `suaneani/admin/`: the dashboard.
 - `firestore.rules`: security rules. Deploy from the console (above) or with the Firebase CLI:
   `firebase deploy --only firestore:rules` (uses `firebase.json` / `.firebaserc`).

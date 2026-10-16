@@ -282,7 +282,7 @@ const LISTS = {
   news: {
     title: 'News',
     icon: 'newspaper',
-    intro: 'Stories on the News page. The newest article (or the one marked Featured) is shown at the top. The News page is currently hidden from the menu; uncomment it in header.html when you are ready.',
+    intro: 'Stories on the News page. The newest article (or the one marked Featured) is shown at the top. The News page is currently hidden from the menu; uncomment it in js/layout.js when you are ready.',
     sort: (a, b) => String(b.date || '').localeCompare(String(a.date || '')),
     fields: [
       { key: 'title', label: 'Title', required: true, max: 200 },
@@ -303,7 +303,7 @@ const LISTS = {
   gallery: {
     title: 'Gallery',
     icon: 'images',
-    intro: 'Photos on the Gallery page. Categories match the filter buttons on the page. The Gallery is currently hidden from the menu; uncomment it in header.html when you are ready.',
+    intro: 'Photos on the Gallery page. Categories match the filter buttons on the page. The Gallery is currently hidden from the menu; uncomment it in js/layout.js when you are ready.',
     sort: (a, b) => (a.order ?? 999) - (b.order ?? 999),
     fields: [
       { key: 'title', label: 'Caption', required: true, max: 120 },

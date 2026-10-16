@@ -18,7 +18,7 @@
 </head>
 <body class="bg-lightBg text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-  <!-- ===== HEADER COMPONENT (loaded from header.html) ===== -->
+  <!-- ===== HEADER COMPONENT (filled in by js/layout.js) ===== -->
   <div id="header-component"></div>
 
   <!-- ===== MAIN CONTENT ===== -->
@@ -140,193 +140,12 @@
 
   </main>
 
-  <!-- ===== FOOTER COMPONENT (loaded from footer.html) ===== -->
+  <!-- ===== FOOTER COMPONENT (filled in by js/layout.js) ===== -->
   <div id="footer-component"></div>
 
   <!-- ========================================================== -->
   <!-- SCRIPTS – Self-contained, doesn't rely on header's script  -->
-  <!-- ========================================================== -->
-  <script>
-    // ============================================================
-    // 1. MOBILE MENU (event delegation – works with dynamic content)
-    // ============================================================
-    document.addEventListener('click', function(e) {
-      var openBtn = e.target.closest('#menu-open');
-      if (openBtn) {
-        e.preventDefault();
-        var overlay = document.getElementById('mobile-overlay');
-        var panel = document.getElementById('mobile-panel');
-        if (overlay) overlay.classList.add('open');
-        if (panel) panel.classList.add('open');
-        if (document.body) document.body.classList.add('no-scroll');
-        return;
-      }
-
-      var closeBtn = e.target.closest('#close-mobile');
-      if (closeBtn) {
-        e.preventDefault();
-        var overlay = document.getElementById('mobile-overlay');
-        var panel = document.getElementById('mobile-panel');
-        if (overlay) overlay.classList.remove('open');
-        if (panel) panel.classList.remove('open');
-        if (document.body) document.body.classList.remove('no-scroll');
-        return;
-      }
-
-      var overlayEl = e.target.closest('#mobile-overlay');
-      if (overlayEl && overlayEl.classList.contains('open')) {
-        var panelEl = document.getElementById('mobile-panel');
-        overlayEl.classList.remove('open');
-        if (panelEl) panelEl.classList.remove('open');
-        if (document.body) document.body.classList.remove('no-scroll');
-      }
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        var overlay = document.getElementById('mobile-overlay');
-        var panel = document.getElementById('mobile-panel');
-        if (overlay && overlay.classList.contains('open')) {
-          overlay.classList.remove('open');
-          if (panel) panel.classList.remove('open');
-          if (document.body) document.body.classList.remove('no-scroll');
-        }
-      }
-    });
-
-    // ============================================================
-    // 2. SET ACTIVE TAB (defines the highlighting logic)
-    // ============================================================
-    function setActiveTab() {
-      console.log('setActiveTab() called');
-
-      // Get current page
-      var path = window.location.pathname;
-      var currentPage = path.split('/').pop() || 'index.html';
-      var pageName = currentPage.replace('.html', '');
-
-      console.log('Current page:', currentPage);
-
-      // --- Desktop: Top-level nav (data-page) ---
-      document.querySelectorAll('#main-nav a[data-page]').forEach(function(link) {
-        var linkPage = link.getAttribute('data-page');
-        link.classList.remove('nav-link-active', 'nav-link-inactive');
-        if (linkPage === pageName) {
-          link.classList.add('nav-link-active');
-        } else {
-          link.classList.add('nav-link-inactive');
-        }
-      });
-
-      // --- Desktop: Partners dropdown ---
-      var partnerPages = ['partners-development.html', 'partners-education.html', 'partners-publishers.html', 'partners-technology.html'];
-      var isPartnerPage = partnerPages.includes(currentPage);
-
-      var partnersTrigger = document.getElementById('partners-dropdown-trigger');
-      if (partnersTrigger) {
-        // Reset
-        partnersTrigger.classList.remove('text-[#f5a623]', 'border-b-2', 'border-[#f5a623]', 'nav-link-active', 'nav-link-inactive');
-        if (isPartnerPage) {
-          // Highlight the trigger
-          partnersTrigger.classList.add('text-[#f5a623]', 'border-b-2', 'border-[#f5a623]');
-        } else {
-          partnersTrigger.classList.add('nav-link-inactive');
-        }
-      }
-
-      // Highlight the specific partner link in dropdown
-      document.querySelectorAll('#main-nav .dropdown-menu a').forEach(function(link) {
-        link.classList.remove('bg-[#fef3c7]', 'text-[#d97706]', 'font-semibold');
-        if (link.getAttribute('href') === currentPage && isPartnerPage) {
-          link.classList.add('bg-[#fef3c7]', 'text-[#d97706]', 'font-semibold');
-        }
-      });
-
-      // --- Mobile: Partner links ---
-      document.querySelectorAll('#mobile-panel a[data-page]').forEach(function(link) {
-        var linkPage = link.getAttribute('data-page');
-        link.classList.remove('mobile-link-active', 'mobile-link-inactive');
-        if (linkPage === pageName) {
-          link.classList.add('mobile-link-active');
-        } else {
-          link.classList.add('mobile-link-inactive');
-        }
-      });
-
-      // Mobile: partner links (no data-page)
-      document.querySelectorAll('#mobile-panel a').forEach(function(link) {
-        var href = link.getAttribute('href');
-        if (partnerPages.includes(href)) {
-          link.classList.remove('mobile-link-active', 'mobile-link-inactive');
-          if (href === currentPage) {
-            link.classList.add('mobile-link-active');
-          } else {
-            link.classList.add('mobile-link-inactive');
-          }
-        }
-      });
-
-      console.log('Active tab set');
-    }
-
-    // ============================================================
-    // 3. LOAD HEADER & FOOTER
-    // ============================================================
-    function loadHeader() {
-      fetch('header.html')
-        .then(function(response) {
-          if (!response.ok) throw new Error('Failed to load header');
-          return response.text();
-        })
-        .then(function(data) {
-          document.getElementById('header-component').innerHTML = data;
-          console.log('Header loaded');
-          // Run multiple times to ensure DOM is ready
-          setTimeout(setActiveTab, 50);
-          setTimeout(setActiveTab, 200);
-          setTimeout(setActiveTab, 500);
-        })
-        .catch(function(error) {
-          console.error('Error loading header:', error);
-        });
-    }
-
-    function loadFooter() {
-      fetch('footer.html')
-        .then(function(response) {
-          if (!response.ok) throw new Error('Failed to load footer');
-          return response.text();
-        })
-        .then(function(data) {
-          document.getElementById('footer-component').innerHTML = data;
-          console.log('Footer loaded');
-        })
-        .catch(function(error) {
-          console.error('Error loading footer:', error);
-        });
-    }
-
-    // ============================================================
-    // 4. INIT
-    // ============================================================
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        loadHeader();
-        loadFooter();
-      });
-    } else {
-      loadHeader();
-      loadFooter();
-    }
-
-    // Re-run on browser back/forward
-    window.addEventListener('popstate', function() {
-      setTimeout(setActiveTab, 100);
-    });
-
-    // Expose for debugging
-    window.setActiveTab = setActiveTab;
-  </script>
+<script src="js/layout.js"></script>
 
   <script type="module" src="js/partner-form.js"></script>
 </body>
