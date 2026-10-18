@@ -455,8 +455,8 @@
       <div class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-widest">
         <p>© 2026 Sua Ne Ani. All Rights Reserved.</p>
         <div class="flex space-x-6 mt-4 md:mt-0">
-          <a class="hover:text-orange-500" href="privacy.html">Privacy</a>
-          <a class="hover:text-orange-500" href="terms.html">Terms</a>
+          <a class="hover:text-orange-500" href="privacy.html">Privacy Policy</a>
+          <a class="hover:text-orange-500" href="terms.html">Terms of Service</a>
         </div>
         <p class="mt-4 md:mt-0"><i class="fas fa-heart text-red-400 mr-1"></i> Designed for learning & humanity.</p>
       </div>
